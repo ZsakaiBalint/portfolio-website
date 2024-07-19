@@ -1,21 +1,3 @@
-bugs: 
-
-BUG 2. -> 
-* when clicking an item in PC view and switching to Mobile: stays at the bottom
-* when clicking an item in Mobile and switching to PC: the opened item stays +
-    right column is empty
-SOLUTION: we need an event listener for view change
-
-* if the viewport size reaches mobile: make 2nd column hidden
-* close all elements in the 1st column
-* open the current active element in the 1st column
-
-* if the viewport size reaches desktop: make 2nd column visible
-* close all elements in the 1st column
-* fill the 2nd column with the description
-
-
-
 Portfolio website
 
 This website hosts my personal projects and my CV in an interactive manner.
