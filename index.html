@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>John Doe portfolio</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Font awesome icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Boostrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Comfortaa&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Custom JS -->
+  <script type="text/javascript" src="scripts.js" defer></script>
+
+</head>
+
+
+
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-inverse roboto-mono-custom">
+    <div class="container-fluid">
+        <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>                        
+        </button>
+        <!-- <a class="navbar-brand" href="#">My Portfolio</a> -->
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Blog</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        </ul>
+        </div>
+    </div>
+</nav>
+
+
+
+<!-- Jumbotron -->
+<div class="jumbotron roboto-mono-custom">
+    <div class="container">
+      <div class="jumbotron-row row">
+        <div class="jumbotron-image-div col-12 col-md-4">
+          <img src="profile_image.jpg" class="jumbotron-image img-fluid img-circle" alt="profile image">
+        </div>
+        <div class="jumbotron-text col-12 col-md-8 ">
+          <h1>John Doe, <br> backend developer</h1>
+          <p>This website hosts my CV and personal projects.</p>
+          <button type="button" class="btn btn-primary">Jump to projects section</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+
+<!-- Quick introduction -->
+<div class="container margin-top">
+  <div class="flexcontainer row">
+    <div class="col-12 col-md-6 margin-auto">
+      <h2> <kbd>Welcome to My Portfolio!</kbd> </h2>
+      <h3 class="roboto-mono-custom">
+        Hello! I'm John Doe, a passionate backend developer with over 3 years of experience in designing, developing, 
+        and maintaining robust and scalable server-side applications. My expertise lies in leveraging technologies like 
+        Node.js, Python, Java, SQL, NoSQL to build efficient and secure backend solutions. AS/400
+      </h3>
+    </div>
+      
+    <div class="col-12 col-md-6 fade-in-element">
+      <img class="fluid-image img-rounded" src="programming.jpg" alt="programming">
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Qualifications -->
+<div class="container margin-top">
+  <div class="flexcontainer row text-center">
+
+    <div class="col-12 col-md-6 fade-in-element margin-auto">
+      <img class="fluid-image img-rounded" src="graduation.jpg" alt="graduation">
+    </div>
+
+    <div class="col-12 col-md-6 margin-auto">
+      <h1><i class="fa-solid fa-graduation-cap"></i></h1>
+      <h2> <kbd>Studies</kbd> </h2>
+      <h3 class="roboto-mono-custom">ELTE Computer Science BSc (Hungary)</h3>
+      <h3 class="roboto-mono-custom">Pursuing computer science,<br> I anticipate graduating this semester - June 26th of 2024.</h3>
+    </div>
+
+  </div>
+</div>
+
+<div class="container margin-top">
+  <div class="flexcontainer row text-center">
+
+    <div class="col-12">
+      <h1><i class="fa-solid fa-code"></i></h1>
+      <h2 class="margin-bottom"> <kbd>Tech Stack</kbd> </h2>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="flexcontainer row text-center">
+    <div class="col-12 col-md-6">
+      <ul class="list-group">
+        <h4 class="list-group-item stack-item roboto-mono-custom" data-status="inactive"><i class="fa-brands fa-symfony"></i>      Symfony</h4>
+        <h4 class="list-group-item item-description roboto-mono-custom">
+          Symfony is a powerful and flexible open-source PHP framework 
+          designed for building complex web applications and APIs. It provides a robust foundation 
+          for developers to create scalable and maintainable web projects with a structured approach. 
+          Symfony is known for its high performance, modularity, and extensive ecosystem.
+          <br>
+          <a href="https://symfony.com/" target="_blank">
+            <button type="button" class="btn btn-info">Jump to the official Symfony website</button>
+          </a>
+        </h4>
+      
+        <h4 class="list-group-item stack-item roboto-mono-custom" data-status="inactive"><i class="fa-solid fa-link"></i>          Doctrine</h4>
+        <h4 class="list-group-item item-description roboto-mono-custom">
+          Doctrine is a powerful Object-Relational Mapping (ORM) library for PHP. It simplifies database interactions by 
+          mapping PHP objects to database tables, allowing developers to work with databases using PHP code instead of SQL. 
+          Doctrine is known for its flexibility, performance, and support for complex database relationships, making it an 
+          essential tool for building robust and maintainable web applications.
+          <br>
+          <a href="https://www.doctrine-project.org/" target="_blank">
+            <button type="button" class="btn btn-info">Jump to the official Doctrine website</button>
+          </a>
+        </h4>
+
+        <h4 class="list-group-item stack-item roboto-mono-custom" data-status="inactive"><i class="fa-solid fa-database"></i>      Postgre SQL</h4>
+        <h4 class="list-group-item item-description roboto-mono-custom">
+          PostgreSQL is a powerful, open-source relational database management system known for its reliability, scalability, 
+          and extensive feature set. It supports advanced data types and performance optimization, making it a preferred choice 
+          for complex web applications and data-driven projects. PostgreSQL's robust architecture and active community contribute 
+          to its continuous improvement and widespread adoption.
+          <br>
+          <a href="https://www.postgresql.org/" target="_blank">
+            <button type="button" class="btn btn-info">Jump to the official PostgreSQL website</button>
+          </a>
+        </h4>
+
+        <h4 class="list-group-item stack-item roboto-mono-custom" data-status="inactive"><i class="fa-brands fa-js"></i>           JavaScript (Node.js)</h4>
+        <h4 class="list-group-item item-description roboto-mono-custom">
+          JavaScript (Node.js) is a versatile runtime environment that allows developers to execute JavaScript on the server-side. 
+          It enables the creation of fast, scalable network applications and real-time services. Node.js leverages the power of 
+          JavaScript, its non-blocking I/O model, and a vast ecosystem of modules to build efficient, event-driven applications 
+          that can handle numerous simultaneous connections with high throughput.
+          <br>
+          <a href="https://nodejs.org/" target="_blank">
+            <button type="button" class="btn btn-info">Jump to the official Node.js website</button>
+          </a>
+        </h4>
+
+        <h4 class="list-group-item stack-item roboto-mono-custom" data-status="inactive"><i class="fa-solid fa-lock"></i>          JWT</h4>
+        <h4 class="list-group-item item-description roboto-mono-custom">
+          JSON Web Token (JWT) is a compact, URL-safe means of representing claims to be transferred between two parties. It is 
+          commonly used for authentication and authorization in web applications, allowing secure and efficient transfer of 
+          user information. JWT's standardized structure and cryptographic security ensure data integrity and trustworthiness 
+          across different systems and platforms.
+          <br>
+          <a href="https://jwt.io/" target="_blank">
+            <button type="button" class="btn btn-info">Jump to the official JWT website</button>
+          </a>
+        </h4>
+
+        <h4 class="list-group-item stack-item roboto-mono-custom" data-status="inactive"><i class="fa-brands fa-git"></i>          Git</h4>
+        <h4 class="list-group-item item-description roboto-mono-custom">
+          Git is a distributed version control system designed to handle everything from small to very large projects with speed 
+          and efficiency. It allows multiple developers to collaborate on code, track changes, and manage project history. Git's 
+          branching and merging capabilities, combined with its robust ecosystem of tools, make it an indispensable tool for 
+          modern software development.
+          <br>
+          <a href="https://git-scm.com/" target="_blank">
+            <button type="button" class="btn btn-info">Jump to the official Git website</button>
+          </a>
+        </h4>
+
+        <h4 class="list-group-item stack-item roboto-mono-custom" data-status="inactive"><i class="fa-brands fa-github"></i>       GitHub</h4>
+        <h4 class="list-group-item item-description roboto-mono-custom">
+          GitHub is a web-based platform that provides hosting for Git repositories. It offers a suite of collaborative features 
+          such as bug tracking, feature requests, task management, and wikis for every project. GitHub's integration with Git 
+          enables seamless code collaboration and sharing, making it an essential tool for developers and open-source projects 
+          around the world.
+          <br>
+          <a href="https://github.com/" target="_blank">
+            <button type="button" class="btn btn-info">Jump to the official GitHub website</button>
+          </a>
+        </h4>
+
+        <h4 class="list-group-item stack-item roboto-mono-custom" data-status="inactive"><i class="fa-brands fa-docker"></i>       Docker</h4>
+        <h4 class="list-group-item item-description roboto-mono-custom">
+          Docker is an open platform for developing, shipping, and running applications in containers. It enables developers to 
+          package applications with all their dependencies into a standardized unit for software development. Docker containers 
+          ensure consistency across multiple development and production environments, streamlining the deployment process and 
+          improving resource efficiency.
+          <br>
+          <a href="https://www.docker.com/" target="_blank">
+            <button type="button" class="btn btn-info">Jump to the official Docker website</button>
+          </a>
+        </h4>
+
+        <h4 class="list-group-item stack-item roboto-mono-custom" data-status="inactive"><i class="fa-solid fa-square-check"></i>  PHPUnit</h4>
+        <h4 class="list-group-item item-description roboto-mono-custom">
+          PHPUnit is a popular testing framework for PHP, designed to support test-driven development. It provides a wide range 
+          of assertions and tools to create, organize, and execute tests, ensuring code quality and reliability. PHPUnit's 
+          integration with continuous integration systems and its extensive documentation make it a valuable tool for maintaining 
+          robust and error-free PHP applications.
+          <br>
+          <a href="https://phpunit.de/" target="_blank">
+            <button type="button" class="btn btn-info">Jump to the official PHPUnit website</button>
+          </a>
+        </h4>
+      </ul>
+    </div>
+
+    <div id="stack-item-col" class="col-12 col-md-6">
+      <ul class="list-group">
+        <h4 id="description-pc" class="list-group-item item-description roboto-mono-custom">
+          <!-- item description goes here on pc view -->
+        </h4>
+      </ul>
+    </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+<!-- Projects section -->
+<div class="container margin-top">
+  <div class="flexcontainer row text-center">
+
+    <div class="col-12">
+      <h1><i class="fa-solid fa-lightbulb"></i></h1>
+      <h2 class="margin-bottom"> <kbd>Projects</kbd></h2>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div id="projects" class="flexcontainer row text-center">
+
+    <div class="col-12 col-md-5">
+      <img src="project1.jpg" class="img-fluid img-rounded" alt="profile image">
+      <h2 class="bebas-neue-regular"><i class="fa-solid fa-terminal"></i> Project name 1</h2>
+      <div class="project-description">
+        <h3 class="roboto-mono-custom">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+          Ut aliquam purus sit amet. Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Fermentum leo vel orci 
+          porta non pulvinar neque. Diam in arcu cursus euismod quis viverra. Nulla facilisi etiam dignissim diam quis enim. Facilisi 
+          etiam dignissim diam quis enim lobortis scelerisque fermentum dui.
+        </h3>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-5">
+      <img src="project2.jpg" class="img-fluid img-rounded" alt="profile image">
+      <h2 class="bebas-neue-regular"><i class="fa-solid fa-terminal"></i> Project name 2</h2>
+      <div class="project-description">
+        <h3 class="roboto-mono-custom">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+          Ut aliquam purus sit amet. Diam in arcu cursus euismod quis viverra. Nulla facilisi etiam dignissim diam quis enim. Facilisi 
+          etiam dignissim diam quis enim lobortis scelerisque fermentum dui.
+        </h3>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-5">
+      <img src="project3.jpg" class="img-fluid img-rounded" alt="profile image">
+      <h2 class="bebas-neue-regular"><i class="fa-solid fa-terminal"></i> Project name 3</h2>
+      <div class="project-description">
+        <h3 class="roboto-mono-custom">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+          Ut aliquam purus sit amet. Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Fermentum leo vel orci 
+          porta non pulvinar neque. Diam in arcu cursus euismod quis viverra. Nulla facilisi etiam dignissim diam quis enim. Facilisi 
+          etiam dignissim diam quis enim lobortis scelerisque fermentum dui. Arcu non sodales neque sodales ut etiam sit. A erat nam 
+          at lectus urna. Risus pretium quam vulputate dignissim suspendisse in est. Nec ultrices dui sapien eget mi proin sed libero enim. 
+          Mi sit amet mauris commodo quis imperdiet massa tincidunt nunc.
+        </h3>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-5">
+      <img src="project4.jpg" class="img-fluid img-rounded" alt="profile image">
+      <h2 class="bebas-neue-regular"><i class="fa-solid fa-terminal"></i> Project name 4</h2>
+        <div class="project-description">
+        <h3 class="roboto-mono-custom">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+          Ut aliquam purus sit amet. Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Fermentum leo vel orci 
+          porta non pulvinar neque. Diam in arcu cursus euismod quis viverra. Nulla facilisi etiam dignissim diam quis enim. Facilisi 
+          etiam dignissim diam quis enim lobortis scelerisque fermentum dui. Arcu non sodales neque sodales ut etiam sit. A erat nam 
+          at lectus urna. Risus pretium quam vulputate dignissim suspendisse in est. Nec ultrices dui sapien eget mi proin sed libero enim. 
+          Mi sit amet mauris commodo quis imperdiet massa tincidunt nunc. Arcu non sodales neque sodales ut etiam sit. A erat nam 
+          at lectus urna. Risus pretium quam vulputate dignissim suspendisse in est. Nec ultrices dui sapien eget mi proin sed libero enim. 
+          Mi sit amet mauris commodo quis imperdiet massa tincidunt nunc.
+        </h3>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-5">
+      <img src="project5.jpg" class="img-fluid img-rounded" alt="profile image">
+      <h2 class="bebas-neue-regular"><i class="fa-solid fa-terminal"></i> Project name 5</h2>
+      <div class="project-description">
+        <h3 class="roboto-mono-custom">
+          Nulla facilisi etiam dignissim diam quis enim. Facilisi 
+          etiam dignissim diam quis enim lobortis scelerisque fermentum dui. Arcu non sodales neque sodales ut etiam sit. A erat nam 
+          at lectus urna. Risus pretium quam vulputate dignissim suspendisse in est. Nec ultrices dui sapien eget mi proin sed libero enim. 
+          Mi sit amet mauris commodo quis imperdiet massa tincidunt nunc.
+        </h3>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+<!-- Footer -->
+<footer class="footer text-center margin-top">
+    <div class="container">
+        <div class="row">
+          <div class="col-sm-4">
+            <h3>Contacts</h3>
+            <p>email: johndone@fubarmail.com</p>
+            <p>phone: +36 30 11 11 111</p>
+            <p>LinkedIn: <a href="https://www.w3schools.com">John Doe</a></p>
+          </div>
+          <div class="col-sm-4">
+            <h3>Thank you for visiting my page!</h3>        
+            <p>This website was made by John Doe, using the Symfony framework.</p>
+          </div>
+          <div class="col-sm-4">
+            <h3>Newsletter</h3>        
+            <p><a href="#">Subscribe to my newsletter</a> to get email notifications about my latest projects!</p>
+            <p>You can cancel this subscription anytime via the 'unsubscribe' button in the email.</p>
+          </div>
+        </div>
+      </div>
+</footer>
+
+
+</body>
+
+</html>
