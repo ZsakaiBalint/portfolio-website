@@ -216,3 +216,19 @@
   opacity: 1;
   transform: translateY(0);
 }
+
+/*form*/
+.g-recaptcha {
+  display: inline-block;
+  margin-bottom: 30px;
+}
+
+.col-form-label {
+  text-align: right;
+  margin-top: 7px;
+}
+
+#messageInput {
+  height: auto; 
+  min-height: 100px; 
+}
