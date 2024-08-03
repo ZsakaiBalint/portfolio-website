@@ -232,3 +232,12 @@
   height: auto; 
   min-height: 100px; 
 }
+
+/* navbar */
+.navbar li {
+  font-size: 15px;
+}
+
+.nav-left li {
+  margin-right: 20px;
+}
