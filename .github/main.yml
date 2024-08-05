@@ -3,10 +3,10 @@ name: Windows Command Line Workflow
 on:
   push:
     branches:
-      - main
+      - ci_cd
   pull_request:
     branches:
-      - main
+      - ci_cd
 
 jobs:
   build:
