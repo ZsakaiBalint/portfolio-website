@@ -18,7 +18,5 @@ jobs:
 
       - name: Navigate to workspace and run commands
         run: |
-          echo "Navigating to the GITHUB_WORKSPACE directory..."
-          cd %GITHUB_WORKSPACE%
           echo "The list of files in this folder:"
           dir
