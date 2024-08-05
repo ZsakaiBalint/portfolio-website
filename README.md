@@ -17,3 +17,9 @@ To get the source code, you can follow these instructions:
 `git config --global user.email "youremail@example.com"`
 * clone the github repo: `git clone https://github.com/ZsakaiBalint/portfolio-website.git`
 * navigate into the local repo: `cd portfolio-website`
+
+## How to commit your changes to this remote repository
+* First, open your favourite IDE and make your first changes to the codebase i. e. VS Code.
+* If you finished working, stage all changes: `git add .`
+* Commit your changes: git commit -m "Your commit message here"
+* Push the changes: git push origin main
