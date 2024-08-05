@@ -22,4 +22,4 @@ jobs:
           FTP_SERVER_USER: ${{ secrets.FTP_SERVER_USER }}
           FTP_SERVER_PASS: ${{ secrets.FTP_SERVER_PASS }}
         run: |
-         .\deploy.ps1 -$ftpServer "$env:FTP_SERVER ADDRESS" -ftpUser "$env:FTP_SERVER_USER" -$ftpPass "$env:FTP_SERVER_PASS"
+          pwsh -File .\deploy.ps1 -ftpServer $env:FTP_SERVER_ADDRESS -ftpUser $env:FTP_SERVER_USER -ftpPass $env:FTP_SERVER_PASS
