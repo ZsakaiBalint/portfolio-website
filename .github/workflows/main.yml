@@ -20,5 +20,6 @@ jobs:
         run: |
           echo "Hello, World!"
           echo "Current directory (Command Prompt):"
+          cd "D:\a\portfolio-website\portfolio-website"
           cd
           dir
