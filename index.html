@@ -50,12 +50,11 @@
 
             <li class="active"><a href="#"><i class="fa-solid fa-house"></i> Home</a></li>
             <li><a href="#"><i class="fa-solid fa-face-smile"></i> About me</a></li>
-            <li><a href="#"><i class="fa-solid fa-code"></i> Projects</a></li>
-            <li><a href="#"><i class="fa-solid fa-newspaper"></i> Blog</a></li>     
-            
+
+            <!--<li><a href="#"><i class="fa-solid fa-code"></i> Projects</a></li>-->
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                  Projects <span class="caret"></span>
+                <i class="fa-solid fa-code"></i> Projects <span class="caret"></span>
               </a>
               <ul class="dropdown-menu">
                   <li><a href="#">*ADMIN* New Project</a></li>
@@ -64,10 +63,19 @@
               </ul>
             </li>
 
+            <!--<li><a href="#"><i class="fa-solid fa-newspaper"></i> Blog</a></li>-->
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                <i class="fa-solid fa-newspaper"></i> Blog <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                  <li><a href="#">*ADMIN* New blog post</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="#">List blog posts</a></li>
+              </ul>
+            </li>
         </ul>
 
-      
-  
         <ul class="nav navbar-nav navbar-right">
             <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
         </ul>
@@ -87,7 +95,7 @@
         <div class="jumbotron-text col-12 col-md-8 ">
           <h1>John Doe, <br> backend developer</h1>
           <p>This website hosts my CV and personal projects.</p>
-          <button type="button" class="btn btn-primary">Jump to projects section</button>
+          <button id="projectsButton" type="button" class="btn btn-primary">Jump to projects section</button>
         </div>
       </div>
     </div>
@@ -272,7 +280,7 @@
 
 
 <!-- Projects section -->
-<div class="container margin-top">
+<div id="projects-section" class="container margin-top">
   <div class="flexcontainer row text-center">
 
     <div class="col-12">
