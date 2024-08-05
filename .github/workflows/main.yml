@@ -29,7 +29,8 @@ jobs:
 
           $files = Get-ChildItem -Path '.' -File
           foreach ($file in $files) {
-              $ftp = [System.Net.FtpWebRequest]::Create('ftp://'+$ftpServer+'/'+$file.Name)
+              $ftpUri = 'ftp://'+$ftpServer+'/'+$file.Name
+              $ftp = [System.Net.FtpWebRequest]::Create($ftpUri)
               $ftp.Method = [System.Net.WebRequestMethods+Ftp]::UploadFile
               $ftp.Credentials = New-Object System.Net.NetworkCredential($ftpUser, $ftpPass)
 
@@ -40,5 +41,3 @@ jobs:
               $fileStream.Close()
           }
           "
-
-
