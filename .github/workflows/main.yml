@@ -1,0 +1,24 @@
+name: Windows Command Line Workflow
+
+on:
+  push:
+    branches:
+      - ci_cd
+  pull_request:
+    branches:
+      - ci_cd
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Run Command Line Commands
+        run: |
+          echo "Hello, World!"
+          echo "Current directory (Command Prompt):"
+          cd
+          dir
