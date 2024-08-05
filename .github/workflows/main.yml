@@ -16,11 +16,12 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Run Command Line Commands
+      - name: Navigate to workspace and run commands
+        shell: pwsh
         run: |
-          echo "Navigating to the GITHUB_WORKSPACE directory..."
-          cd %GITHUB_WORKSPACE%
-          echo "Current directory after change:"
-          cd
-          echo "Running commands in the workspace directory:"
-          dir
+          Write-Output "Navigating to the GITHUB_WORKSPACE directory..."
+          Set-Location -Path $env:GITHUB_WORKSPACE
+          Write-Output "Current directory after change:"
+          Get-Location
+          Write-Output "Running commands in the workspace directory:"
+          Get-ChildItem
