@@ -16,21 +16,29 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Create FTP commands file
-        run: |
-          echo open %FTP_SERVER_ADDRESS% > ftp_commands.txt
-          echo %FTP_SERVER_USER% >> ftp_commands.txt
-          echo %FTP_SERVER_PASS% >> ftp_commands.txt
-          echo binary >> ftp_commands.txt
-          echo prompt >> ftp_commands.txt
-          echo mput * >> ftp_commands.txt
-          echo bye >> ftp_commands.txt
-
-      - name: Run FTP commands
+      - name: Run PowerShell script for FTP
         env:
           FTP_SERVER_ADDRESS: ${{ secrets.FTP_SERVER_ADDRESS }}
           FTP_SERVER_USER: ${{ secrets.FTP_SERVER_USER }}
           FTP_SERVER_PASS: ${{ secrets.FTP_SERVER_PASS }}
         run: |
-          ftp -s:ftp_commands.txt
+          pwsh -Command "
+          $ftpServer = '$env:FTP_SERVER_ADDRESS'
+          $ftpUser = '$env:FTP_SERVER_USER'
+          $ftpPass = '$env:FTP_SERVER_PASS'
+
+          $files = Get-ChildItem -Path '.' -File
+          foreach ($file in $files) {
+              $ftp = [System.Net.FtpWebRequest]::Create('ftp://'+$ftpServer+'/'+$file.Name)
+              $ftp.Method = [System.Net.WebRequestMethods+Ftp]::UploadFile
+              $ftp.Credentials = New-Object System.Net.NetworkCredential($ftpUser, $ftpPass)
+
+              $fileStream = [System.IO.File]::OpenRead($file.FullName)
+              $requestStream = $ftp.GetRequestStream()
+              $fileStream.CopyTo($requestStream)
+              $requestStream.Close()
+              $fileStream.Close()
+          }
+          "
+
 
