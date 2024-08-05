@@ -21,5 +21,5 @@ To get the source code, you can follow these instructions:
 ## How to commit your changes to this remote repository
 * First, open your favourite IDE and make your first changes to the codebase i. e. VS Code.
 * If you finished working, stage all changes: `git add .`
-* Commit your changes: git commit -m "Your commit message here"
-* Push the changes: git push origin main
+* Commit your changes: `git commit -m "Your commit message here"`
+* Push the changes: `git push origin main`
