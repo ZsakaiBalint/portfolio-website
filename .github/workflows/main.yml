@@ -22,14 +22,14 @@ jobs:
           FTP_SERVER_USER: ${{ secrets.FTP_SERVER_USER }}
           FTP_SERVER_PASS: ${{ secrets.FTP_SERVER_PASS }}
         run: |
-          pwsh -Command "
-          $ftpServer = '$env:FTP_SERVER_ADDRESS'
-          $ftpUser = '$env:FTP_SERVER_USER'
-          $ftpPass = '$env:FTP_SERVER_PASS'
+          pwsh -Command '
+          $ftpServer = "%FTP_SERVER_ADDRESS%"
+          $ftpUser = "%$FTP_SERVER_USER%"
+          $ftpPass = "%$FTP_SERVER_PASS%"
 
-          $files = Get-ChildItem -Path '.' -File
+          $files = Get-ChildItem -Path "." -File
           foreach ($file in $files) {
-              $ftpUri = 'ftp://'+$ftpServer+'/'+$file.Name
+              $ftpUri = "ftp://"+$ftpServer+"/"+$file.Name
               $ftp = [System.Net.FtpWebRequest]::Create($ftpUri)
               $ftp.Method = [System.Net.WebRequestMethods+Ftp]::UploadFile
               $ftp.Credentials = New-Object System.Net.NetworkCredential($ftpUser, $ftpPass)
@@ -40,4 +40,4 @@ jobs:
               $requestStream.Close()
               $fileStream.Close()
           }
-          "
+          '
