@@ -28,8 +28,8 @@ jobs:
           open $FTP_SERVER_ADDRESS
           $FTP_SERVER_USER
           $FTP_SERVER_PASS
-          binary
-          prompt
-          mput *
-          bye
+          echo "binary"
+          echo "prompt"
+          echo "mput *"
+          echo "bye"
 
