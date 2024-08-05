@@ -15,5 +15,5 @@ To get the source code, you can follow these instructions:
 * First, set your git name and email globally:
 `git config --global user.name "Your Name"`
 `git config --global user.email "youremail@example.com"`
-* clone the github repo
-`
+* clone the github repo: `git clone https://github.com/ZsakaiBalint/portfolio-website.git`
+* navigate into the local repo: `cd portfolio-website`
