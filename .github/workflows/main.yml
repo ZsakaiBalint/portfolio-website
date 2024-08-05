@@ -1,25 +1,16 @@
-name: FTP Upload Workflow
-
-on:
-  push:
-    branches:
-      - ci_cd
-  pull_request:
-    branches:
-      - ci_cd
-
+on: push
+name: 🚀 Deploy website on push
 jobs:
-  upload:
-    runs-on: windows-latest
-
+  web-deploy:
+    name: 🎉 Deploy
+    runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-
-      - name: Run PowerShell script for FTP upload
-        env:
-          FTP_SERVER_ADDRESS: ${{ secrets.FTP_SERVER_ADDRESS }}
-          FTP_SERVER_USER: ${{ secrets.FTP_SERVER_USER }}
-          FTP_SERVER_PASS: ${{ secrets.FTP_SERVER_PASS }}
-        run: |
-          pwsh -File .\deploy.ps1 -ftpServer $env:FTP_SERVER_ADDRESS -ftpUser $env:FTP_SERVER_USER -ftpPass $env:FTP_SERVER_PASS
+    - name: 🚚 Get latest code
+      uses: actions/checkout@v4
+    
+    - name: 📂 Sync files
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      with:
+        server: ${{ FTP_SERVER_ADDRESS }}
+        username: ${{ FTP_SERVER_USER }}
+        password: ${{ FTP_SERVER_PASS }}
