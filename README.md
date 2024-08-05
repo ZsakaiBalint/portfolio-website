@@ -4,7 +4,6 @@ This repository hosts my portfolio website, made in the symfony framework.
 Here is a detailed tutorial on how to get the source code of the project and use this github reposotory for development, using a Windows machine.
 
 ## How to get the source code
-
 To get the source code, you can follow these instructions:
 1. Create a local directory on your machine where you want to store your symfony projects (optional).
 * Open the command prompt, and navigate where you want to create your projects. I will create a folder in the root of my D drive: `D:`
@@ -24,3 +23,6 @@ To get the source code, you can follow these instructions:
 * If you finished working, stage all changes: `git add .`
 * Commit your changes: `git commit -m "Your commit message here"`
 * Push the changes: `git push origin main`
+
+## Where can you read and edit the documentation
+you can find the documentation of this repo in the [Wiki section](https://github.com/ZsakaiBalint/portfolio-website/wiki)
