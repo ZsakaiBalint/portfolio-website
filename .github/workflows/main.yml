@@ -17,11 +17,8 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Navigate to workspace and run commands
-        shell: pwsh
         run: |
-          Write-Output "Navigating to the GITHUB_WORKSPACE directory..."
-          Set-Location -Path $env:GITHUB_WORKSPACE
-          Write-Output "Current directory after change:"
-          Get-Location
-          Write-Output "Running commands in the workspace directory:"
-          Get-ChildItem
+          echo "Navigating to the GITHUB_WORKSPACE directory..."
+          cd %GITHUB_WORKSPACE%
+          echo "The list of files in this folder:"
+          dir
