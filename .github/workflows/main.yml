@@ -18,8 +18,9 @@ jobs:
 
       - name: Run Command Line Commands
         run: |
-          echo "Hello, World!"
-          echo "Current directory (Command Prompt):"
-          cd "D:\a\portfolio-website\portfolio-website"
+          echo "Navigating to the GITHUB_WORKSPACE directory..."
+          cd %GITHUB_WORKSPACE%
+          echo "Current directory after change:"
           cd
+          echo "Running commands in the workspace directory:"
           dir
