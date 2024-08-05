@@ -10,3 +10,10 @@ To get the source code, you can follow these instructions:
 * Open the command prompt, and navigate where you want to create your projects. I will create a folder in the root of my D drive: `D:`
 * Create a new folder: `mkdir symfony_projects`
 * Navigate into that folder: `cd symfony_projects`
+
+2. Clone the remote repository:
+* First, set your git name and email globally:
+`git config --global user.name "Your Name"`
+`git config --global user.email "youremail@example.com"`
+* clone the github repo
+`
