@@ -16,20 +16,21 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Navigate to workspace and run commands
+      - name: Create FTP commands file
+        run: |
+          echo open %FTP_SERVER_ADDRESS% > ftp_commands.txt
+          echo %FTP_SERVER_USER% >> ftp_commands.txt
+          echo %FTP_SERVER_PASS% >> ftp_commands.txt
+          echo binary >> ftp_commands.txt
+          echo prompt >> ftp_commands.txt
+          echo mput * >> ftp_commands.txt
+          echo bye >> ftp_commands.txt
+
+      - name: Run FTP commands
         env:
           FTP_SERVER_ADDRESS: ${{ secrets.FTP_SERVER_ADDRESS }}
           FTP_SERVER_USER: ${{ secrets.FTP_SERVER_USER }}
           FTP_SERVER_PASS: ${{ secrets.FTP_SERVER_PASS }}
         run: |
-          echo "The list of files in this folder:"
-          dir
-          ftp
-          open $FTP_SERVER_ADDRESS
-          $FTP_SERVER_USER
-          $FTP_SERVER_PASS
-          echo "binary"
-          echo "prompt"
-          echo "mput *"
-          echo "bye"
+          ftp -s:ftp_commands.txt
 
