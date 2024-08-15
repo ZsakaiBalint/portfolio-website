@@ -11,11 +11,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout main repository
-      uses: actions/checkout@v2
-      with:
-        fetch-depth: 0 # Ensure full history is fetched
-
     - name: Clone GitHub Wiki repository
       run: |
         git clone https://github.com/ZsakaiBalint/portfolio-website.wiki.git wiki-repo
