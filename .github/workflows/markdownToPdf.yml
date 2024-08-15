@@ -3,8 +3,7 @@ name: Convert Markdown to PDF
 on:
   push:
     branches:
-      - main
-  workflow_dispatch:
+      - ci_cd
 
 jobs:
   convert-md-to-pdf:
