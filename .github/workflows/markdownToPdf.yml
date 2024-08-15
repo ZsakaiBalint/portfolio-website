@@ -5,9 +5,9 @@ on:
     branches:
       - ci_cd
     # Paths can be used to only trigger actions when you have edited certain files, such as a file within the /docs directory
-    paths:
-      - 'docs/**.md'             #containing markdown files
-      - 'docs/images/**'         #containing images
+    # paths:
+    #  - 'docs/**.md'             #containing markdown files
+    #  - 'docs/images/**'         #containing images
 
 jobs:
   converttopdf:
