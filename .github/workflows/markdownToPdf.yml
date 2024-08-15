@@ -3,7 +3,8 @@ name: Convert Markdown to PDF
 on:
   push:
     branches:
-      - ci_cd
+      - main
+  workflow_dispatch:
 
 jobs:
   convert-md-to-pdf:
@@ -17,14 +18,16 @@ jobs:
       run: |
         git clone https://github.com/ZsakaiBalint/portfolio-website.wiki.git wiki-repo
 
-    - name: Install Pandoc
-      run: sudo apt-get install -y pandoc texlive-xetex texlive-fonts-recommended
+    - name: Install Pandoc and LaTeX
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y pandoc texlive-xetex texlive-fonts-recommended
 
     - name: Convert Markdown to PDF
       run: |
         mkdir -p docs
         cd wiki-repo
-        pandoc *.md -o ../docs/output.pdf
+        pandoc *.md --pdf-engine=xelatex -o ../docs/output.pdf
 
     - name: Commit and push PDF to main repository
       run: |
