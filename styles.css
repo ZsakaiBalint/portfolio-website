@@ -294,7 +294,6 @@ html {
   min-height: 100px; 
 }
 
-
-.navbar-right a {
+li a {
   text-align: center;
 }
