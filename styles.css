@@ -10,6 +10,7 @@
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
+  line-height: 1.6;
 }
 
 /*footer*/
@@ -294,33 +295,6 @@ html {
 }
 
 
-/* Navbar */
-
-/* Ensure proper spacing in the navbar */
-.navbar-nav {
-  display: flex;
-  align-items: center;
-}
-
-.navbar-nav.nav-left {
-  margin-right: auto; /* Pushes the right navbar to the far right */
-}
-
-.navbar-nav.navbar-right {
-  margin-left: auto; /* Pushes the left navbar to the far left */
-}
-
-@media (max-width: 820px) {
-  /* Adjust margins in mobile view to prevent collision */
-  .navbar-nav.nav-left,
-  .navbar-nav.navbar-right {
-      margin-right: 0;
-      margin-left: auto;
-  }
-
-  /* Center the items vertically in mobile view */
-  .navbar-nav {
-      width: 100%;
-      justify-content: space-between;
-  }
+.navbar-right a {
+  text-align: center;
 }
