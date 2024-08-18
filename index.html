@@ -36,51 +36,46 @@
 
 <!-- Navbar -->
 <nav class="navbar navbar-inverse roboto-mono-custom">
-    <div class="container">
-        <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>                        
-        </button>
-        <!-- <a class="navbar-brand" href="#">My Portfolio</a> -->
-        </div>
-        <div class="collapse navbar-collapse" id="myNavbar">
-        <ul class="nav navbar-nav nav-left">
-
-            <li class="active"><a href="#"><i class="fa-solid fa-house"></i> Home</a></li>
-            <li><a href="#"><i class="fa-solid fa-face-smile"></i> About me</a></li>
-
-            <!--<li><a href="#"><i class="fa-solid fa-code"></i> Projects</a></li>-->
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                <i class="fa-solid fa-code"></i> Projects <span class="caret"></span>
-              </a>
-              <ul class="dropdown-menu">
-                  <li><a href="#">*ADMIN* New Project</a></li>
-                  <li role="separator" class="divider"></li>
-                  <li><a href="#">List projects</a></li>
-              </ul>
-            </li>
-
-            <!--<li><a href="#"><i class="fa-solid fa-newspaper"></i> Blog</a></li>-->
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                <i class="fa-solid fa-newspaper"></i> Blog <span class="caret"></span>
-              </a>
-              <ul class="dropdown-menu">
-                  <li><a href="#">*ADMIN* New blog post</a></li>
-                  <li role="separator" class="divider"></li>
-                  <li><a href="#">List blog posts</a></li>
-              </ul>
-            </li>
-        </ul>
-
-        <ul class="nav navbar-nav navbar-right">
-            <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-        </ul>
-        </div>
-    </div>
+  <div class="container">
+      <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>                        
+          </button>
+          <!-- <a class="navbar-brand" href="#">My Portfolio</a> -->
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav nav-left">
+              <li class="active"><a href="#"><i class="fa-solid fa-house"></i> Home</a></li>
+              <li><a href="#"><i class="fa-solid fa-user"></i> About me</a></li>
+              <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                      <i class="fa-solid fa-code"></i> Projects <span class="caret"></span>
+                  </a>
+                  <ul class="dropdown-menu">
+                      <li><a href="#">*ADMIN* New Project</a></li>
+                      <li role="separator" class="divider"></li>
+                      <li><a href="#">List projects</a></li>
+                  </ul>
+              </li>
+              <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                      <i class="fa-solid fa-newspaper"></i> Blog <span class="caret"></span>
+                  </a>
+                  <ul class="dropdown-menu">
+                      <li><a href="#">*ADMIN* New blog post</a></li>
+                      <li role="separator" class="divider"></li>
+                      <li><a href="#">List blog posts</a></li>
+                  </ul>
+              </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+              <li><a href="#"><i class="fa-solid fa-user-plus"></i> Sign Up</a></li>
+              <li><a href="#"><i class="fa-solid fa-right-to-bracket"></i> Login</a></li>
+          </ul>
+      </div>
+  </div>
 </nav>
 
 
@@ -89,14 +84,20 @@
 <div class="jumbotron roboto-mono-custom">
     <div class="container">
       <div class="jumbotron-row row">
-        <div class="jumbotron-image-div col-12 col-md-4">
-          <img src="images/profile_image.jpg" class="jumbotron-image img-fluid img-circle" alt="profile image">
+        <div class="jumbotron-image-div col-12 col-md-6">
+          <img src="images/profile_image.png" class="jumbotron-image img-fluid img-circle" alt="profile image">
         </div>
-        <div class="jumbotron-text col-12 col-md-8 ">
-          <h1>John Doe, <br> backend developer</h1>
-          <p>This website hosts my CV and personal projects.</p>
-          <button id="projectsButton" type="button" class="btn btn-primary">Jump to projects section</button>
+        <div class="jumbotron-text col-12 col-md-6 ">
+          <h1>Bálint Zsákai</h1>
+          <h2>backend developer</h2> 
+          <p>This website hosts my personal projects and CV.</p>
+
+          <div class="button-container">
+            <button id="projectsButton" type="button" class="btn btn-secondary"><b>Jump to projects</b></button>
+            <button id="CVButton" type="button" class="btn btn-secondary"><b>Download CV</b></button>
+          </div>
         </div>
+
       </div>
     </div>
 </div>
@@ -109,9 +110,9 @@
     <div class="col-12 col-md-6 margin-auto">
       <h2> <kbd>Welcome to My Portfolio!</kbd> </h2>
       <h3 class="roboto-mono-custom">
-        Hello! I'm John Doe, a passionate backend developer with over 3 years of experience in designing, developing, 
+        Hello! I'm Bálint Zsákai, a passionate backend developer with over 3 years of experience in designing, developing, 
         and maintaining robust and scalable server-side applications. My expertise lies in leveraging technologies like 
-        Node.js, Python, Java, SQL, NoSQL to build efficient and secure backend solutions. AS/400
+        Node.js, Python, Java, SQL, NoSQL to build efficient and secure backend solutions.
       </h3>
     </div>
       
@@ -293,72 +294,58 @@
 <div class="container">
   <div id="projects" class="flexcontainer row text-center">
 
-    <div class="col-12 col-md-5">
+    <div class="col-12 col-md-4 col-sm-6">
       <img src="images/project1.jpg" class="img-fluid img-rounded" alt="profile image">
       <h2 class="bebas-neue-regular"><i class="fa-solid fa-terminal"></i> Project name 1</h2>
       <div class="project-description">
         <h3 class="roboto-mono-custom">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Ut aliquam purus sit amet. Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Fermentum leo vel orci 
-          porta non pulvinar neque. Diam in arcu cursus euismod quis viverra. Nulla facilisi etiam dignissim diam quis enim. Facilisi 
-          etiam dignissim diam quis enim lobortis scelerisque fermentum dui.
+          Ut aliquam purus sit amet. 
         </h3>
       </div>
     </div>
 
-    <div class="col-12 col-md-5">
+    <div class="col-12 col-md-4 col-sm-6">
       <img src="images/project2.jpg" class="img-fluid img-rounded" alt="profile image">
       <h2 class="bebas-neue-regular"><i class="fa-solid fa-terminal"></i> Project name 2</h2>
       <div class="project-description">
         <h3 class="roboto-mono-custom">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Ut aliquam purus sit amet. Diam in arcu cursus euismod quis viverra. Nulla facilisi etiam dignissim diam quis enim. Facilisi 
-          etiam dignissim diam quis enim lobortis scelerisque fermentum dui.
+          Ut aliquam purus sit amet.
         </h3>
       </div>
     </div>
 
-    <div class="col-12 col-md-5">
+    <div class="col-12 col-md-4 col-sm-6">
       <img src="images/project3.jpg" class="img-fluid img-rounded" alt="profile image">
       <h2 class="bebas-neue-regular"><i class="fa-solid fa-terminal"></i> Project name 3</h2>
       <div class="project-description">
         <h3 class="roboto-mono-custom">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Ut aliquam purus sit amet. Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Fermentum leo vel orci 
-          porta non pulvinar neque. Diam in arcu cursus euismod quis viverra. Nulla facilisi etiam dignissim diam quis enim. Facilisi 
-          etiam dignissim diam quis enim lobortis scelerisque fermentum dui. Arcu non sodales neque sodales ut etiam sit. A erat nam 
-          at lectus urna. Risus pretium quam vulputate dignissim suspendisse in est. Nec ultrices dui sapien eget mi proin sed libero enim. 
-          Mi sit amet mauris commodo quis imperdiet massa tincidunt nunc.
+          Ut aliquam purus sit amet.
         </h3>
       </div>
     </div>
 
-    <div class="col-12 col-md-5">
+    <div class="col-12 col-md-4 col-sm-6">
       <img src="images/project4.jpg" class="img-fluid img-rounded" alt="profile image">
       <h2 class="bebas-neue-regular"><i class="fa-solid fa-terminal"></i> Project name 4</h2>
         <div class="project-description">
         <h3 class="roboto-mono-custom">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Ut aliquam purus sit amet. Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Fermentum leo vel orci 
-          porta non pulvinar neque. Diam in arcu cursus euismod quis viverra. Nulla facilisi etiam dignissim diam quis enim. Facilisi 
-          etiam dignissim diam quis enim lobortis scelerisque fermentum dui. Arcu non sodales neque sodales ut etiam sit. A erat nam 
-          at lectus urna. Risus pretium quam vulputate dignissim suspendisse in est. Nec ultrices dui sapien eget mi proin sed libero enim. 
-          Mi sit amet mauris commodo quis imperdiet massa tincidunt nunc. Arcu non sodales neque sodales ut etiam sit. A erat nam 
-          at lectus urna. Risus pretium quam vulputate dignissim suspendisse in est. Nec ultrices dui sapien eget mi proin sed libero enim. 
-          Mi sit amet mauris commodo quis imperdiet massa tincidunt nunc.
+          Ut aliquam purus sit amet.
         </h3>
       </div>
     </div>
 
-    <div class="col-12 col-md-5">
+    <div class="col-12 col-md-4 col-sm-6">
       <img src="images/project5.jpg" class="img-fluid img-rounded" alt="profile image">
       <h2 class="bebas-neue-regular"><i class="fa-solid fa-terminal"></i> Project name 5</h2>
       <div class="project-description">
         <h3 class="roboto-mono-custom">
           Nulla facilisi etiam dignissim diam quis enim. Facilisi 
           etiam dignissim diam quis enim lobortis scelerisque fermentum dui. Arcu non sodales neque sodales ut etiam sit. A erat nam 
-          at lectus urna. Risus pretium quam vulputate dignissim suspendisse in est. Nec ultrices dui sapien eget mi proin sed libero enim. 
-          Mi sit amet mauris commodo quis imperdiet massa tincidunt nunc.
+          at lectus urna. 
         </h3>
       </div>
     </div>
