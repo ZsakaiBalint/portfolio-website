@@ -1,3 +1,9 @@
+/* 
+COLORS
+#7b8c6c
+#2c4729
+*/
+
 /*custom font*/
 .bebas-neue-regular {
   font-family: "Bebas Neue", sans-serif;
@@ -53,6 +59,11 @@
   white-space: normal;
 }
 
+.jumbotron button:hover {
+  color: white;
+  background-color: #7b8c6c;
+}
+
 .button-container {
   display: flex;
   gap: 10px;
@@ -89,15 +100,43 @@
   transition: background-color 1s ease, color 1s ease;
 }
 
-.list-group-item:hover {
-  background-color: #337ab7;
+.list-group-item:hover:not(#description-pc,.item-description) {
+  background-color: #2c4729;
   cursor: pointer;
   color: white;
 }
 
+.list-group-item[data-status="active"] {
+  background-color: black;
+  color: white;
+}
+
+.list-group button {
+  transition: background-color 1s ease, border-color 1s ease;
+}
+
+.list-group button {
+  background-color: #2c4729;
+  border-color: #2c4729;
+}
+
+.list-group button:hover {
+  background-color: black;
+  border-color: black;
+}
+
+.btn-info:focus {
+  background-color: #2c4729;
+  border-color: #2c4729;
+}
+
+.description-pc button {
+  background-color: #2c4729 !important;
+}
+
 .item-description {
   line-height: 1.6;
-  background-color: #337ab7;
+  background-color: #7b8c6c;
   color: white;
   display: none;
 }
@@ -153,7 +192,6 @@ html {
   display: flex;
   align-items: stretch;
   flex-wrap: wrap;
-  row-gap: 60px;
   justify-content: flex-start;
 }
 
@@ -164,7 +202,18 @@ html {
   margin: 20px;
   margin-top: 40px;
   border: 3px solid black;
-  box-shadow: 60px -16px #337ab7;
+  box-shadow: 1rem 1rem black, -1rem -1rem #ccc;
+  transition: box-shadow 1s ease, transform 1s ease;;
+}
+
+.project {
+  transition: background-color 1s ease;
+  padding: 20px;
+}
+
+.project-inner {
+  border: 3px solid black;
+  border-radius: 20px;
 }
 
 .project-description {
@@ -176,40 +225,27 @@ html {
   padding: 10px;
 }
 
-#projects .col-md-5 {
-  background-color: #dbdbdb;
-  margin: 0px 30px 0px 30px;
-  border-radius: 20px;
-  box-shadow: 10px 5px 5px black;
-  border: 3px solid black;
-}
-
 #projects h2 {
-  background-color: #337ab7;
+  background-color: #7b8c6c;
   box-shadow: 3px 3px 3px black;
   color: white;
 }
 
+.project:hover img {
+  box-shadow: 4rem 4rem black, -4rem -4rem #ccc !important;
+  transform: translateY(-20px);
+}
 
-#projects .col-md-5:hover img {
-  box-shadow: 60px -16px #dbdbdb;
-  transition: box-shadow 1s ease;
-}
-#projects .col-md-5:hover h2 {
-  background-color: #dbdbdb;
-  color: black;
-  transition: background-color 1s ease, color 1s ease;
-}
-#projects .col-md-5:hover h3 {
+.project:hover .project-inner {
+  background-color: #7b8c6c;
   color: white;
-  transition: color 1s ease;
-}
-#projects .col-md-5:hover {
   cursor: pointer;
-  background-color: #337ab7;
+}
+
+.project:hover h2 {
+  background-color: #2c4729 !important;
   transition: background-color 1s ease;
 }
-
 
 
 /*adjustments for small viewport*/
@@ -304,6 +340,7 @@ li a {
 
 .navbar {
   background-color: #7b8c6c;
+  font-weight: bold;
 }
 
 .nav a {
@@ -316,7 +353,7 @@ li a {
 }
 
 .active a {
-  background-color: #2c4729 !important;
+  background-color: black !important;
 }
 
 .dropdown-toggle[aria-expanded="true"] {
@@ -334,13 +371,13 @@ li a {
 
 .dropdown-menu a {
   background-color: #7b8c6c;
+  font-weight: bold !important;
 }
-
-
 
 .navbar-toggle {
   background-color: #888 !important;
 }
+
 .navbar .icon-bar {
   background-color: white !important;
 }
@@ -351,4 +388,28 @@ li a {
 
 .navbar-toggle:hover .icon-bar {
   background-color: #888 !important;
+}
+
+
+/* form */
+.form {
+  width: 60%;
+}
+
+.form-group label {
+  text-align: left;
+}
+
+.form button, .form button:active {
+  background-color: #2c4729;
+  cursor: pointer;
+  color: white;
+}
+
+.form button:hover {
+  background-color: black;
+}
+
+.form button {
+  margin-top: 50px;
 }
