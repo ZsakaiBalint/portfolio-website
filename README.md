@@ -5,6 +5,9 @@ Here is a detailed tutorial on how to get the source code of the project and use
 
 ## How to get the source code
 To get the source code, you can follow these instructions:
+
+0. Download Git from the official website: https://git-scm.com/
+
 1. Create a local directory on your machine where you want to store your symfony projects (optional).
 * Open the command prompt, and navigate where you want to create your projects. I will create a folder in the root of my D drive: `D:`
 * Create a new folder: `mkdir symfony_projects`
