@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bálint Zsákai portfolio</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="images/letter_b.ico">
+
+  <!-- Font awesome icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Boostrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Comfortaa&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Custom JS -->
+  <script type="text/javascript" src="scripts.js" defer></script>
+
+  <!-- Google reCAPTCHA -->
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+</head>
+
+
+<body>
+
+<!-- Navbar -->
+<div class="container">
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="index.html">Home <span class="sr-only">(current)</span></a></li>
+        <li><a href="#">About me</a></li>
+
+        <li class="active dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Projects<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">*Admin* New project</a></li>
+            <li><a href="#">List projects</a></li>
+            <li role="separator" class="divider"></li>
+          </ul>
+        </li>
+      </ul>
+      <!--
+      <form class="navbar-form navbar-left">
+        
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+      -->
+
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+            <img src="https://flagcdn.com/16x12/gb.png" srcset="https://flagcdn.com/32x24/gb.png 2x,https://flagcdn.com/48x36/gb.png 3x" width="16" height="12" alt="United Kingdom"> EN
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#"><img src="https://flagcdn.com/16x12/gb.png" srcset="https://flagcdn.com/32x24/gb.png 2x,https://flagcdn.com/48x36/gb.png 3x" width="16" height="12" alt="United Kingdom"> EN</a></li>
+            <li><a href="#"><img src="https://flagcdn.com/16x12/hu.png" srcset="https://flagcdn.com/32x24/hu.png 2x,https://flagcdn.com/48x36/hu.png 3x" width="16" height="12" alt="Hungary"> HU</a></li>
+            <li role="separator" class="divider"></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container-fluid -->
+</nav>
+</div>
+
+
+
+
+<div class="container margin-top">
+  <div class="flexcontainer row text-center">
+
+    <div class="col-12 col-md-6 d-flex flex-column align-items-center margin-auto">
+      <h1 class="roboto-mono-custom">Project name 1</h1>
+      <button type="button" class="btn btn-info project-button"> Try it yourself </button>
+      <button type="button" class="btn btn-info project-button"> Get the source code </button>
+      <button type="button" class="btn btn-info project-button"> View documentation </button>
+    </div>
+
+    <div class="col-12 col-md-6 margin-auto">
+      <img id="project-img" class="fluid-image img-rounded" src="images/project1.jpg" alt="graduation">
+    </div>
+
+  </div>
+</div>
+
+<div class="container margin-top">
+  <div class="flexcontainer row text-center">
+
+    <div class="col-12 margin-auto">
+      <h2 class="text-left roboto-mono-custom">Project description</h2>
+      <p class="text-left roboto-mono-custom">
+        Lorem ipsum odor amet, consectetuer adipiscing elit. Mus aenean mauris euismod risus sit, pulvinar risus nam. Sodales ad vulputate quam nulla ex accumsan. Cras nunc laoreet vulputate aptent litora amet primis accumsan pulvinar. Condimentum pretium quam platea adipiscing cursus. Fusce lectus tellus phasellus et nunc lectus proin nisi montes. Duis vulputate pellentesque tellus nibh venenatis est. Magna eleifend neque platea auctor consequat porta. Interdum tellus sollicitudin nibh bibendum integer.
+        Libero volutpat etiam metus venenatis condimentum. Habitasse leo cras tellus etiam dictum semper. Dui ultrices maximus pretium commodo cursus, elementum augue curae? Nam litora condimentum arcu lacinia phasellus interdum. Id et porttitor ligula praesent phasellus augue. Iaculis vestibulum ornare tempor ac himenaeos felis dis neque. Convallis facilisis sollicitudin placerat tempus vehicula donec nostra nulla. Ligula nunc fringilla potenti id commodo nullam. Potenti euismod habitasse massa erat nec urna.
+      </p>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+
+
+
+
+<div class="container margin-top no-padding">
+
+  <div class="col-12 margin-auto">
+    <h2 class="text-left roboto-mono-custom">Gallery</h2>
+  </div>
+    
+
+  <div id="gallery" class="flexcontainer row text-center">
+
+    <div class="col-12 col-md-3 col-sm-6">
+      <img src="images/project1.jpg" class="img-fluid img-rounded" alt="profile image">
+    </div>
+
+    <div class="col-12 col-md-3 col-sm-6">
+      <img src="images/project1.jpg" class="img-fluid img-rounded" alt="profile image">
+    </div>
+
+    <div class="col-12 col-md-3 col-sm-6">
+      <img src="images/project1.jpg" class="img-fluid img-rounded" alt="profile image">
+    </div>
+
+    <div class="col-12 col-md-3 col-sm-6">
+      <img src="images/project1.jpg" class="img-fluid img-rounded" alt="profile image">
+    </div>
+
+    <div class="col-12 col-md-3 col-sm-6">
+      <img src="images/project1.jpg" class="img-fluid img-rounded" alt="profile image">
+    </div>
+
+    <div class="col-12 col-md-3 col-sm-6">
+      <img src="images/project1.jpg" class="img-fluid img-rounded" alt="profile image">
+    </div>
+
+  </div>
+</div>
+
+
+<!-- Footer -->
+<footer class="footer text-center margin-top roboto-mono-custom">
+  <div class="container">
+      <div class="row">
+        <div class="col-sm-6">
+          <h3>Contacts</h3>
+          <p>email: balintzsakai@gmail.com</p>
+          <p>phone: +36 30 24 55 655</p>
+          <p>LinkedIn: <a href="linkedin.com/in/bálint-zsákai">linkedin.com/in/bálint-zsákai</a></p>
+        </div>
+        <div class="col-sm-6">
+          <h3>Terms of Service and Privacy Policy</h3>        
+          <p>By using this site, you agree to the <a href="#projects">Terms of Service</a> and <a href="#projects">Privacy Policy</a>.</p>
+        </div>
+      </div>
+    </div>
+</footer>
+
+
+</body>
+
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bálint Zsákai portfolio</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="images/letter_b.ico">
+
+  <!-- Font awesome icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Boostrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Comfortaa&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Custom JS -->
+  <script type="text/javascript" src="scripts.js" defer></script>
+
+  <!-- Google reCAPTCHA -->
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+</head>
+
+
+<body>
+
+<!-- Navbar -->
+<div class="container">
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="index.html">Home <span class="sr-only">(current)</span></a></li>
+        <li><a href="#">About me</a></li>
+
+        <li class="active dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Projects<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">*Admin* New project</a></li>
+            <li><a href="#">List projects</a></li>
+            <li role="separator" class="divider"></li>
+          </ul>
+        </li>
+      </ul>
+      <!--
+      <form class="navbar-form navbar-left">
+        
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+      -->
+
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+            <img src="https://flagcdn.com/16x12/gb.png" srcset="https://flagcdn.com/32x24/gb.png 2x,https://flagcdn.com/48x36/gb.png 3x" width="16" height="12" alt="United Kingdom"> EN
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#"><img src="https://flagcdn.com/16x12/gb.png" srcset="https://flagcdn.com/32x24/gb.png 2x,https://flagcdn.com/48x36/gb.png 3x" width="16" height="12" alt="United Kingdom"> EN</a></li>
+            <li><a href="#"><img src="https://flagcdn.com/16x12/hu.png" srcset="https://flagcdn.com/32x24/hu.png 2x,https://flagcdn.com/48x36/hu.png 3x" width="16" height="12" alt="Hungary"> HU</a></li>
+            <li role="separator" class="divider"></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container-fluid -->
+</nav>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<div class="form container text-center roboto-mono-custom">
+  <form>
+
+    <div class="form-group row">
+        <label for="inputName1" class="col-sm-2 col-form-label">Project Name</label>
+        <input type="text" class="form-control" placeholder="Image rasteriser" id="inputName1" aria-describedby="inputName1" >
+    </div>
+
+    <div class="form-group row">
+      <label for="inputEmal1" class="col-sm-2 col-form-label">Demo link</label>
+      <input type="email" class="form-control" placeholder="https://image_rasteriser_by_balint" id="inputEmal1">
+    </div>
+
+    <div class="form-group row">
+      <label for="inputEmal1" class="col-sm-2 col-form-label">Source code link</label>
+      <input type="email" class="form-control" placeholder="https://github.com/ZsakaiBalint/image-rasteriser" id="inputEmal1">
+    </div>
+
+    <div class="form-group row">
+      <label for="inputEmal1" class="col-sm-2 col-form-label">Documentation link</label>
+      <input type="email" class="form-control" placeholder="hhttps://github.com/ZsakaiBalint/image-rasteriser/wiki" id="inputEmal1">
+    </div>
+
+    <div class="form-group row">
+      <label for="messageInput1" class="col-sm-2 col-form-label">Project Description</label>
+      <textarea 
+      placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." 
+      class="form-control" id="messageInput" rows="10"></textarea>
+    </div>
+
+    <div class="form-group row">
+      <label for="files" class="col-sm-2 col-form-label">Upload images and videos</label>
+      <input type="file" id="files" name="files" multiple><br><br>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Publish Project</button>
+
+  </form>
+</div>
+
+
+
+
+
+
+
+<!-- Footer -->
+<footer class="footer text-center margin-top roboto-mono-custom">
+    <div class="container">
+        <div class="row">
+          <div class="col-sm-6">
+            <h3>Contacts</h3>
+            <p>email: balintzsakai@gmail.com</p>
+            <p>phone: +36 30 24 55 655</p>
+            <p>LinkedIn: <a href="linkedin.com/in/bálint-zsákai">linkedin.com/in/bálint-zsákai</a></p>
+          </div>
+          <div class="col-sm-6">
+            <h3>Terms of Service and Privacy Policy</h3>        
+            <p>By using this site, you agree to the <a href="#projects">Terms of Service</a> and <a href="#projects">Privacy Policy</a>.</p>
+          </div>
+        </div>
+      </div>
+</footer>
+
+
+</body>
+
+</html>
