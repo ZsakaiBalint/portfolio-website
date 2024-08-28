@@ -2,8 +2,13 @@
 function scrollToProjects() {
   document.getElementById('projects-section').scrollIntoView({ behavior: 'smooth' });
 }
-// Add event listener to the button
-document.getElementById('projectsButton').addEventListener('click', scrollToProjects);
+
+const projectsButton = document.getElementById('projectsButton');
+
+if (projectsButton) {
+    projectsButton.addEventListener('click', scrollToProjects);
+}
+/////////////////////////////////////////////
   
 
 //fade in functionality of images on scroll (from bottom to top, once)
@@ -160,9 +165,11 @@ function handleStackItemClick(event) {
 
 }
 
+//add functionality to stack items.
 document.addEventListener('DOMContentLoaded', (event) => {
   const stackItems = document.querySelectorAll('.stack-item');
   stackItems.forEach(item => {
     item.addEventListener('click', handleStackItemClick);
   });
 });
+//////////////////////////////////////////////////////

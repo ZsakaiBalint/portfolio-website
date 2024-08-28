@@ -19,13 +19,14 @@ To get the source code, you can follow these instructions:
 `git config --global user.email "youremail@example.com"`
 * clone the github repo: `git clone https://github.com/ZsakaiBalint/portfolio-website.git`
 * navigate into the local repo: `cd portfolio-website`
-* pull changes: `git pull`
+* to get the exact copy of all branches in the repo, run this powershell script (for windows users): `branches.ps1`
 
 ## How to commit your changes to this remote repository
-* First, open your favourite IDE and make your first changes to the codebase i. e. VS Code.
+* First, checkout the branch you want to work on: `git checkout branchname2`
+* Open your favourite IDE and make your first changes to the codebase i. e. VS Code.
 * If you finished working, stage all changes: `git add .`
 * Commit your changes: `git commit -m "Your commit message here"`
-* Push the changes: `git push origin main`
+* Push the changes: `git push`
 
 ## Where can you read and edit the documentation
 you can find the documentation of this repo in the [Wiki section](https://github.com/ZsakaiBalint/portfolio-website/wiki)

@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>John Doe portfolio</title>
+  <title>Bálint Zsákai portfolio</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="images/letter_b.ico">
 
   <!-- Font awesome icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -31,72 +32,90 @@
 </head>
 
 
-
 <body>
 
 <!-- Navbar -->
-<nav class="navbar navbar-inverse roboto-mono-custom">
-    <div class="container">
-        <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>                        
-        </button>
-        <!-- <a class="navbar-brand" href="#">My Portfolio</a> -->
-        </div>
-        <div class="collapse navbar-collapse" id="myNavbar">
-        <ul class="nav navbar-nav nav-left">
-
-            <li class="active"><a href="#"><i class="fa-solid fa-house"></i> Home</a></li>
-            <li><a href="#"><i class="fa-solid fa-face-smile"></i> About me</a></li>
-
-            <!--<li><a href="#"><i class="fa-solid fa-code"></i> Projects</a></li>-->
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                <i class="fa-solid fa-code"></i> Projects <span class="caret"></span>
-              </a>
-              <ul class="dropdown-menu">
-                  <li><a href="#">*ADMIN* New Project</a></li>
-                  <li role="separator" class="divider"></li>
-                  <li><a href="#">List projects</a></li>
-              </ul>
-            </li>
-
-            <!--<li><a href="#"><i class="fa-solid fa-newspaper"></i> Blog</a></li>-->
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                <i class="fa-solid fa-newspaper"></i> Blog <span class="caret"></span>
-              </a>
-              <ul class="dropdown-menu">
-                  <li><a href="#">*ADMIN* New blog post</a></li>
-                  <li role="separator" class="divider"></li>
-                  <li><a href="#">List blog posts</a></li>
-              </ul>
-            </li>
-        </ul>
-
-        <ul class="nav navbar-nav navbar-right">
-            <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-        </ul>
-        </div>
+<div class="container">
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
     </div>
-</nav>
 
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
+        <li><a href="./about.html">About me</a></li>
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Projects<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="./new_project.html">*Admin* New project</a></li>
+            <li><a href="#">List projects</a></li>
+            <li role="separator" class="divider"></li>
+          </ul>
+        </li>
+
+
+
+      </ul>
+      <!--
+      <form class="navbar-form navbar-left">
+        
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+      -->
+
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+            <img src="https://flagcdn.com/16x12/gb.png" srcset="https://flagcdn.com/32x24/gb.png 2x,https://flagcdn.com/48x36/gb.png 3x" width="16" height="12" alt="United Kingdom"> EN
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#"><img src="https://flagcdn.com/16x12/gb.png" srcset="https://flagcdn.com/32x24/gb.png 2x,https://flagcdn.com/48x36/gb.png 3x" width="16" height="12" alt="United Kingdom"> EN</a></li>
+            <li><a href="#"><img src="https://flagcdn.com/16x12/hu.png" srcset="https://flagcdn.com/32x24/hu.png 2x,https://flagcdn.com/48x36/hu.png 3x" width="16" height="12" alt="Hungary"> HU</a></li>
+            <li role="separator" class="divider"></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container-fluid -->
+</nav>
+</div>
 
 
 <!-- Jumbotron -->
 <div class="jumbotron roboto-mono-custom">
     <div class="container">
       <div class="jumbotron-row row">
-        <div class="jumbotron-image-div col-12 col-md-4">
+        <div class="jumbotron-image-div col-12 col-md-6">
           <img src="images/profile_image.jpg" class="jumbotron-image img-fluid img-circle" alt="profile image">
         </div>
-        <div class="jumbotron-text col-12 col-md-8 ">
-          <h1>John Doe, <br> backend developer</h1>
-          <p>This website hosts my CV and personal projects.</p>
-          <button id="projectsButton" type="button" class="btn btn-primary">Jump to projects section</button>
+        <div class="jumbotron-text col-12 col-md-6 ">
+          <h1>Bálint Zsákai</h1>
+          <h2>backend developer</h2> 
+          <p>This website hosts my personal projects and CV.</p>
+
+          <div class="button-container">
+            <button id="projectsButton" type="button" class="btn btn-secondary"><b>Jump to projects</b></button>
+            <button id="CVButton" type="button" class="btn btn-secondary"><b>Download CV</b></button>
+          </div>
         </div>
+
       </div>
     </div>
 </div>
@@ -106,17 +125,13 @@
 <!-- Quick introduction -->
 <div class="container margin-top">
   <div class="flexcontainer row">
-    <div class="col-12 col-md-6 margin-auto">
-      <h2> <kbd>Welcome to My Portfolio!</kbd> </h2>
+    <div class="col-12 margin-auto">
+      <h2> <kbd>Welcome to my portfolio!</kbd> </h2>
       <h3 class="roboto-mono-custom">
-        Hello! I'm John Doe, a passionate backend developer with over 3 years of experience in designing, developing, 
+        Hello! I'm Bálint Zsákai, a passionate backend developer with over 3 years of experience in designing, developing, 
         and maintaining robust and scalable server-side applications. My expertise lies in leveraging technologies like 
-        Node.js, Python, Java, SQL, NoSQL to build efficient and secure backend solutions. AS/400
+        Node.js, Python, Java, SQL, NoSQL to build efficient and secure backend solutions.
       </h3>
-    </div>
-      
-    <div class="col-12 col-md-6 fade-in-element">
-      <img class="fluid-image img-rounded" src="images/programming.jpg" alt="programming">
     </div>
   </div>
 </div>
@@ -128,14 +143,13 @@
   <div class="flexcontainer row text-center">
 
     <div class="col-12 col-md-6 fade-in-element margin-auto">
-      <img class="fluid-image img-rounded" src="images/graduation.jpg" alt="graduation">
+      <img class="fluid-image img-rounded" src="images/portfolio_1.jpg" alt="graduation">
     </div>
 
     <div class="col-12 col-md-6 margin-auto">
       <h1><i class="fa-solid fa-graduation-cap"></i></h1>
       <h2> <kbd>Studies</kbd> </h2>
-      <h3 class="roboto-mono-custom">ELTE Computer Science BSc (Hungary)</h3>
-      <h3 class="roboto-mono-custom">Pursuing computer science,<br> I anticipate graduating this semester - June 26th of 2024.</h3>
+      <h3 class="roboto-mono-custom">I completed my <br><u>BSc in Computer Science</u> <br>at ELTE University in Hungary in 2024.</h3>
     </div>
 
   </div>
@@ -146,7 +160,8 @@
 
     <div class="col-12">
       <h1><i class="fa-solid fa-code"></i></h1>
-      <h2 class="margin-bottom"> <kbd>Tech Stack</kbd> </h2>
+      <h2> <kbd>Tech stack</kbd> </h2>
+      <h2 class="margin-bottom"> <kbd>(technologies I use daily)</kbd> </h2>
     </div>
   </div>
 </div>
@@ -163,7 +178,7 @@
           Symfony is known for its high performance, modularity, and extensive ecosystem.
           <br>
           <a href="https://symfony.com/" target="_blank">
-            <button type="button" class="btn btn-info">Jump to the official Symfony website</button>
+            <button type="button" class="btn btn-info"> Symfony website</button>
           </a>
         </h4>
       
@@ -175,7 +190,7 @@
           essential tool for building robust and maintainable web applications.
           <br>
           <a href="https://www.doctrine-project.org/" target="_blank">
-            <button type="button" class="btn btn-info">Jump to the official Doctrine website</button>
+            <button type="button" class="btn btn-info"> Doctrine website</button>
           </a>
         </h4>
 
@@ -187,7 +202,7 @@
           to its continuous improvement and widespread adoption.
           <br>
           <a href="https://www.postgresql.org/" target="_blank">
-            <button type="button" class="btn btn-info">Jump to the official PostgreSQL website</button>
+            <button type="button" class="btn btn-info"> PostgreSQL website</button>
           </a>
         </h4>
 
@@ -199,7 +214,7 @@
           that can handle numerous simultaneous connections with high throughput.
           <br>
           <a href="https://nodejs.org/" target="_blank">
-            <button type="button" class="btn btn-info">Jump to the official Node.js website</button>
+            <button type="button" class="btn btn-info"> Node.js website</button>
           </a>
         </h4>
 
@@ -211,7 +226,7 @@
           across different systems and platforms.
           <br>
           <a href="https://jwt.io/" target="_blank">
-            <button type="button" class="btn btn-info">Jump to the official JWT website</button>
+            <button type="button" class="btn btn-info"> JWT website</button>
           </a>
         </h4>
 
@@ -223,7 +238,7 @@
           modern software development.
           <br>
           <a href="https://git-scm.com/" target="_blank">
-            <button type="button" class="btn btn-info">Jump to the official Git website</button>
+            <button type="button" class="btn btn-info"> Git website</button>
           </a>
         </h4>
 
@@ -235,7 +250,7 @@
           around the world.
           <br>
           <a href="https://github.com/" target="_blank">
-            <button type="button" class="btn btn-info">Jump to the official GitHub website</button>
+            <button type="button" class="btn btn-info"> GitHub website</button>
           </a>
         </h4>
 
@@ -247,7 +262,7 @@
           improving resource efficiency.
           <br>
           <a href="https://www.docker.com/" target="_blank">
-            <button type="button" class="btn btn-info">Jump to the official Docker website</button>
+            <button type="button" class="btn btn-info"> Docker website</button>
           </a>
         </h4>
 
@@ -259,7 +274,7 @@
           robust and error-free PHP applications.
           <br>
           <a href="https://phpunit.de/" target="_blank">
-            <button type="button" class="btn btn-info">Jump to the official PHPUnit website</button>
+            <button type="button" class="btn btn-info"> PHPUnit website</button>
           </a>
         </h4>
       </ul>
@@ -291,75 +306,94 @@
 </div>
 
 <div class="container">
+
   <div id="projects" class="flexcontainer row text-center">
 
-    <div class="col-12 col-md-5">
-      <img src="images/project1.jpg" class="img-fluid img-rounded" alt="profile image">
-      <h2 class="bebas-neue-regular"><i class="fa-solid fa-terminal"></i> Project name 1</h2>
-      <div class="project-description">
-        <h3 class="roboto-mono-custom">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Ut aliquam purus sit amet. Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Fermentum leo vel orci 
-          porta non pulvinar neque. Diam in arcu cursus euismod quis viverra. Nulla facilisi etiam dignissim diam quis enim. Facilisi 
-          etiam dignissim diam quis enim lobortis scelerisque fermentum dui.
-        </h3>
+    <div class="col-12 col-md-4 col-sm-6 project">
+      <div class="button-container">
+        <button id="projectsButton" type="button" class="btn btn-secondary"><i class="fa-solid fa-pen-to-square"></i></button>
+        <button id="CVButton" type="button" class="btn btn-secondary"><i class="fa-solid fa-trash"></i></button>
+      </div>
+      <div class="project-inner">
+        <a href="project_1.html">
+          <img src="images/project1.jpg" class="img-fluid img-rounded" alt="profile image">
+          <h2 class="bebas-neue-regular"><i class="fa-solid fa-terminal"></i> Project name 1</h2>
+          <div class="project-description">
+            <h4 class="roboto-mono-custom">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+              Ut aliquam purus sit amet. 
+            </h4>
+          </div>
+        </a>
       </div>
     </div>
 
-    <div class="col-12 col-md-5">
-      <img src="images/project2.jpg" class="img-fluid img-rounded" alt="profile image">
-      <h2 class="bebas-neue-regular"><i class="fa-solid fa-terminal"></i> Project name 2</h2>
-      <div class="project-description">
-        <h3 class="roboto-mono-custom">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Ut aliquam purus sit amet. Diam in arcu cursus euismod quis viverra. Nulla facilisi etiam dignissim diam quis enim. Facilisi 
-          etiam dignissim diam quis enim lobortis scelerisque fermentum dui.
-        </h3>
+    <div class="col-12 col-md-4 col-sm-6 project">
+      <div class="button-container">
+        <button id="projectsButton" type="button" class="btn btn-secondary"><i class="fa-solid fa-pen-to-square"></i></button>
+        <button id="CVButton" type="button" class="btn btn-secondary"><i class="fa-solid fa-trash"></i></button>
       </div>
-    </div>
-
-    <div class="col-12 col-md-5">
-      <img src="images/project3.jpg" class="img-fluid img-rounded" alt="profile image">
-      <h2 class="bebas-neue-regular"><i class="fa-solid fa-terminal"></i> Project name 3</h2>
-      <div class="project-description">
-        <h3 class="roboto-mono-custom">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Ut aliquam purus sit amet. Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Fermentum leo vel orci 
-          porta non pulvinar neque. Diam in arcu cursus euismod quis viverra. Nulla facilisi etiam dignissim diam quis enim. Facilisi 
-          etiam dignissim diam quis enim lobortis scelerisque fermentum dui. Arcu non sodales neque sodales ut etiam sit. A erat nam 
-          at lectus urna. Risus pretium quam vulputate dignissim suspendisse in est. Nec ultrices dui sapien eget mi proin sed libero enim. 
-          Mi sit amet mauris commodo quis imperdiet massa tincidunt nunc.
-        </h3>
-      </div>
-    </div>
-
-    <div class="col-12 col-md-5">
-      <img src="images/project4.jpg" class="img-fluid img-rounded" alt="profile image">
-      <h2 class="bebas-neue-regular"><i class="fa-solid fa-terminal"></i> Project name 4</h2>
+      <div class="project-inner">
+        <img src="images/project2.jpg" class="img-fluid img-rounded" alt="profile image">
+        <h2 class="bebas-neue-regular"><i class="fa-solid fa-terminal"></i> Project name 2</h2>
         <div class="project-description">
-        <h3 class="roboto-mono-custom">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Ut aliquam purus sit amet. Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Fermentum leo vel orci 
-          porta non pulvinar neque. Diam in arcu cursus euismod quis viverra. Nulla facilisi etiam dignissim diam quis enim. Facilisi 
-          etiam dignissim diam quis enim lobortis scelerisque fermentum dui. Arcu non sodales neque sodales ut etiam sit. A erat nam 
-          at lectus urna. Risus pretium quam vulputate dignissim suspendisse in est. Nec ultrices dui sapien eget mi proin sed libero enim. 
-          Mi sit amet mauris commodo quis imperdiet massa tincidunt nunc. Arcu non sodales neque sodales ut etiam sit. A erat nam 
-          at lectus urna. Risus pretium quam vulputate dignissim suspendisse in est. Nec ultrices dui sapien eget mi proin sed libero enim. 
-          Mi sit amet mauris commodo quis imperdiet massa tincidunt nunc.
-        </h3>
+          <h4 class="roboto-mono-custom">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            Ut aliquam purus sit amet.
+          </h4>
+        </div>
       </div>
     </div>
 
-    <div class="col-12 col-md-5">
-      <img src="images/project5.jpg" class="img-fluid img-rounded" alt="profile image">
-      <h2 class="bebas-neue-regular"><i class="fa-solid fa-terminal"></i> Project name 5</h2>
-      <div class="project-description">
-        <h3 class="roboto-mono-custom">
-          Nulla facilisi etiam dignissim diam quis enim. Facilisi 
-          etiam dignissim diam quis enim lobortis scelerisque fermentum dui. Arcu non sodales neque sodales ut etiam sit. A erat nam 
-          at lectus urna. Risus pretium quam vulputate dignissim suspendisse in est. Nec ultrices dui sapien eget mi proin sed libero enim. 
-          Mi sit amet mauris commodo quis imperdiet massa tincidunt nunc.
-        </h3>
+    <div class="col-12 col-md-4 col-sm-6 project">
+      <div class="button-container">
+        <button id="projectsButton" type="button" class="btn btn-secondary"><i class="fa-solid fa-pen-to-square"></i></button>
+        <button id="CVButton" type="button" class="btn btn-secondary"><i class="fa-solid fa-trash"></i></button>
+      </div>
+      <div class="project-inner">
+        <img src="images/project3.jpg" class="img-fluid img-rounded" alt="profile image">
+        <h2 class="bebas-neue-regular"><i class="fa-solid fa-terminal"></i> Project name 3</h2>
+        <div class="project-description">
+          <h4 class="roboto-mono-custom">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            Ut aliquam purus sit amet.
+          </h4>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-4 col-sm-6 project">
+      <div class="button-container">
+        <button id="projectsButton" type="button" class="btn btn-secondary"><i class="fa-solid fa-pen-to-square"></i></button>
+        <button id="CVButton" type="button" class="btn btn-secondary"><i class="fa-solid fa-trash"></i></button>
+      </div>
+      <div class="project-inner">
+        <img src="images/project4.jpg" class="img-fluid img-rounded" alt="profile image">
+        <h2 class="bebas-neue-regular"><i class="fa-solid fa-terminal"></i> Project name 4</h2>
+          <div class="project-description">
+          <h4 class="roboto-mono-custom">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            Ut aliquam purus sit amet.
+          </h4>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-4 col-sm-6 project">
+      <div class="button-container">
+        <button id="projectsButton" type="button" class="btn btn-secondary"><i class="fa-solid fa-pen-to-square"></i></button>
+        <button id="CVButton" type="button" class="btn btn-secondary"><i class="fa-solid fa-trash"></i></button>
+      </div>
+      <div class="project-inner">
+        <img src="images/project5.jpg" class="img-fluid img-rounded" alt="profile image">
+        <h2 class="bebas-neue-regular"><i class="fa-solid fa-terminal"></i> Project name 5</h2>
+        <div class="project-description">
+          <h4 class="roboto-mono-custom">
+            Nulla facilisi etiam dignissim diam quis enim. Facilisi 
+            etiam dignissim diam quis enim lobortis scelerisque fermentum dui. Arcu non sodales neque sodales ut etiam sit. A erat nam 
+            at lectus urna. 
+          </h4>
+        </div>
       </div>
     </div>
 
@@ -382,37 +416,24 @@
   <form>
 
     <div class="form-group row">
-      <label for="inputName1" class="col-sm-2 col-form-label">Your name:</label>
-      <div class="col-sm-8">
-        <input type="text" class="form-control" placeholder="Enter name..." id="inputName1" aria-describedby="inputName1" >
-      </div>
-      <label class="col-sm-2 col-form-label"></label>
+        <label for="inputName1" class="col-sm-2 col-form-label">Name</label>
+        <input type="text" class="form-control" placeholder="John Done" id="inputName1" aria-describedby="inputName1" >
     </div>
 
     <div class="form-group row">
-      <label for="inputEmal1" class="col-sm-2 col-form-label">Your email:</label>
-      <div class="col-sm-8">
-        <input type="email" class="form-control" placeholder="Enter email..." id="inputEmal1">
-      </div>
-      <label class="col-sm-2 col-form-label"></label>
+      <label for="inputEmal1" class="col-sm-2 col-form-label">Email</label>
+      <input type="email" class="form-control" placeholder="johndoe123@fubarmail.com" id="inputEmal1">
     </div>
 
     <div class="form-group row">
-      <label for="messageInput1" class="col-sm-2 col-form-label">Your message:</label>
-      <div class="col-sm-8">
-        <textarea placeholder="Enter message..." class="form-control" id="messageInput"></textarea>
-      </div>
-      <label class="col-sm-2 col-form-label"></label>
+      <label for="messageInput1" class="col-sm-2 col-form-label">Message</label>
+      <textarea placeholder="Your message..." class="form-control" id="messageInput" rows="10"></textarea>
     </div>
 
-    <!--
     <div class="form-check">
       <input type="checkbox" class="form-check-input" id="exampleCheck1">
-      <label class="form-check-label" for="exampleCheck1">Check me out</label>
+      <label class="form-check-label" for="exampleCheck1">I accept the <a href="#projects">Terms of Service</a> and <a href="#project">Privacy Policy</a>. </label>
     </div>
-    -->
-    
-    <div class="g-recaptcha" data-sitekey="6LfU6x0qAAAAAF6Q2_kBKBuDdsRsQJlkxnUZf5wp"></div><br>
 
     <button type="submit" class="btn btn-primary">Send message</button>
 
@@ -424,20 +445,15 @@
 <footer class="footer text-center margin-top roboto-mono-custom">
     <div class="container">
         <div class="row">
-          <div class="col-sm-4">
+          <div class="col-sm-6">
             <h3>Contacts</h3>
-            <p>email: johndone@fubarmail.com</p>
-            <p>phone: +36 30 11 11 111</p>
-            <p>LinkedIn: <a href="https://www.w3schools.com">John Doe</a></p>
+            <p>email: balintzsakai@gmail.com</p>
+            <p>phone: +36 30 24 55 655</p>
+            <p>LinkedIn: <a href="linkedin.com/in/bálint-zsákai">linkedin.com/in/bálint-zsákai</a></p>
           </div>
-          <div class="col-sm-4">
-            <h3>Thank you for visiting my page!</h3>        
-            <p>This website was made by John Doe, using the Symfony framework.</p>
-          </div>
-          <div class="col-sm-4">
-            <h3>Newsletter</h3>        
-            <p><a href="#">Subscribe to my newsletter</a> to get email notifications about my latest projects!</p>
-            <p>You can cancel this subscription anytime via the 'unsubscribe' button in the email.</p>
+          <div class="col-sm-6">
+            <h3>Terms of Service and Privacy Policy</h3>        
+            <p>By using this site, you agree to the <a href="#projects">Terms of Service</a> and <a href="#projects">Privacy Policy</a>.</p>
           </div>
         </div>
       </div>
