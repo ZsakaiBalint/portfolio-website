@@ -1,3 +1,4 @@
+#this script adds a configuration file (php.ini) to the downloaded php version
 $dest = scoop prefix php
 $dest = $dest + "\ext"
 $source = Get-Location
