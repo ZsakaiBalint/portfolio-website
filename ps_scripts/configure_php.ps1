@@ -48,6 +48,9 @@ error_log="C:\path\to\php-error.log"
 pdo_mysql.default_socket="C:/path/to/mysql.sock"
 ; Adjust settings for other drivers if needed
 
+; Enable openssl
+extension=openssl
+
 ;disable short_open_tag
 short_open_tag = Off
 "@

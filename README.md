@@ -20,6 +20,8 @@ To get the source code, you can follow these instructions:
 * clone the github repo: `git clone https://github.com/ZsakaiBalint/portfolio-website.git`
 * navigate into the local repo: `cd portfolio-website`
 * to get the exact copy of all branches in the repo, run this powershell script (for windows users): `branches.ps1`
+* to install all development tools for developing symfony applications, run this script: (for windows users): `install_dev_tools.ps1`
+* to configure php for symfony development, run this script: (for windows users): `configure_php.ps1`
 
 ## How to commit your changes to this remote repository
 * First, checkout the branch you want to work on: `git checkout branchname2`
