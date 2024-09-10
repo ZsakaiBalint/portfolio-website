@@ -6,17 +6,6 @@ const projectsButton = document.getElementById('projectsButton');
 projectsButton.addEventListener('click', scrollToProjects);
 
 
-
-// Function to download cv
-document.getElementById('CVButton').addEventListener('click', function() {
-  const link = document.createElement('a');
-  link.href = 'Bálint Zsákai CV.pdf';
-  link.download = 'Bálint Zsákai CV.pdf';
-  link.click();
-}); 
-
-
-
 //fade in functionality of images on scroll (from bottom to top, once)
 $(document).ready(function() {
   $(window).on('scroll', function() {

@@ -548,3 +548,23 @@ li a {
 .eula {
   margin-top: 50px;
 }
+
+.delete-button {
+  background-color: red;
+  color: white;
+}
+
+.delete-button:hover {
+  background-color: white;
+  color: red;
+}
+
+.edit-button {
+  background-color: green;
+  color: white;
+}
+
+.edit-button:hover {
+  background-color: white;
+  color: green;
+}
