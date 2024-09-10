@@ -568,3 +568,30 @@ li a {
   background-color: white;
   color: green;
 }
+
+
+
+
+
+
+/* Iframe */
+.iframe-header {
+  color: white !important;
+  margin-bottom: 0px;
+  border-radius: 10px;
+  color: black;
+  text-align: center;
+  background-color: #2f2f2f;
+  padding: 15px;
+  margin-bottom: 5px;
+}
+
+.iframe-footer {
+  color: white !important;
+  margin-top: 0px;
+  border-radius: 10px;
+  color: black;
+  text-align: center;
+  background-color: #2f2f2f;
+  padding: 15px;
+}
