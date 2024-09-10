@@ -22,9 +22,18 @@ if (!(scoop list | Select-String "composer")) {
     Write-Host "Composer is already installed."
 }
 
-# Install Symfony CLI (only if it is not already installed)
-if (!(scoop list | Select-String "symfony-cli")) {
-    scoop install symfony-cli
+# Install MySQL (only if it is not already installed)     
+if (!(scoop list | Select-String "mysql")) {
+    scoop install main/mysql
 } else {
-    Write-Host "Symfony CLI is already installed."
+    Write-Host "MySQL is already installed."
 }
+
+# Install xampp (only if it is not already installed)     
+if (!(scoop list | Select-String "xampp")) {
+    scoop bucket add extras
+    scoop install extras/xampp
+} else {
+    Write-Host "XAMPP is already installed."
+}
+

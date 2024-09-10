@@ -48,6 +48,9 @@ error_log="C:\path\to\php-error.log"
 pdo_mysql.default_socket="C:/path/to/mysql.sock"
 ; Adjust settings for other drivers if needed
 
+; add OpenSSL extension
+extension=openssl
+
 ;disable short_open_tag
 short_open_tag = Off
 "@
@@ -63,9 +66,7 @@ $newLine = "`n$newLine"
 $phpIniContent += $newLine
 
 $dest = scoop prefix php
-# Create a new php.ini file 
-# TODO
-# add content to php.ini with the content defined above
+#create php.ini with the content defined above
 Set-Content -Path $source -Value $phpIniContent -Encoding UTF8
 
 #copy the php.ini file to it's final place
