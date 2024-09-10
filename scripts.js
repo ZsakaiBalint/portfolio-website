@@ -3,29 +3,9 @@ function scrollToProjects() {
   document.getElementById('projects-section').scrollIntoView({ behavior: 'smooth' });
 }
 const projectsButton = document.getElementById('projectsButton');
-projectsButton.addEventListener('click', scrollToProjects);
-
-
-//fade in functionality of images on scroll (from bottom to top, once)
-$(document).ready(function() {
-  $(window).on('scroll', function() {
-    $('.fade-in-element').each(function() {
-      if (isElementInViewport($(this))) {
-        $(this).addClass('visible');
-      }
-    });
-  });
-
-  function isElementInViewport(el) {
-    var elementTop = el.offset().top;
-    var elementBottom = elementTop + el.outerHeight();
-
-    var viewportTop = $(window).scrollTop();
-    var viewportBottom = viewportTop + $(window).height();
-
-    return elementBottom > viewportTop && elementTop < viewportBottom;
-  }
-});
+if(projectsButton) {
+  projectsButton.addEventListener('click', scrollToProjects);
+}
 
 //TECH STACK FUNCTIONALITY -TOGGLE DESCRIPTION- RESPONSIVE
 
