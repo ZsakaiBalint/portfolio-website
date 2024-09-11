@@ -1,0 +1,52 @@
+/*custom font*/
+.bebas-neue-regular {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.roboto-mono-custom {
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.6;
+}
+
+/*miscellaneous*/
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  width: 90%;
+}
+
+.margin-top {
+  margin-top: 100px;
+}
+
+.margin-bottom {
+  margin-bottom: 30px;
+}
+
+.padding-bottom {
+  padding-bottom: 50px;
+}
+
+.fluid-image {
+  width: 100%;
+  height: auto;
+}
+
+.margin-auto {
+  margin: auto;
+}
+
+.hidden-element {
+  visibility: hidden;
+}
+
+.flexcontainer {
+  display: flex;
+}
