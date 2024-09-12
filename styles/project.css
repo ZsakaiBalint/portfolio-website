@@ -19,6 +19,10 @@
     background-color: #2f2f2f;
     padding: 15px;
 }
+
+.iframe-footer button {
+    margin-bottom: 5px;
+}
   
 
 /* Gallery modal */
