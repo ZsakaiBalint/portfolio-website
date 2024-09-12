@@ -54,3 +54,23 @@ html {
 li a {
   text-align: center;
 }
+
+.delete-button {
+  background-color: red;
+  color: white;
+}
+
+.delete-button:hover {
+  background-color: white;
+  color: red;
+}
+
+.edit-button {
+  background-color: green;
+  color: white;
+}
+
+.edit-button:hover {
+  background-color: white;
+  color: green;
+}

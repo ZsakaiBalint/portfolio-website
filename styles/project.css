@@ -59,3 +59,21 @@
     transform: translateY(-20px);
     cursor: pointer;
 }
+
+
+.back-button {
+    color: white;
+    background-color: #2f2f2f;
+    border: 2px solid transparent;
+}
+
+.back-button:hover {
+    color: #2f2f2f;
+    background-color: white;
+    border: 2px solid black;
+}
+
+.space-between {
+    display: flex;
+    justify-content: space-between;
+}
