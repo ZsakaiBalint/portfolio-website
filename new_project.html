@@ -26,12 +26,6 @@
   <link rel="stylesheet" href="styles/footer.css">
   <link rel="stylesheet" href="styles/new_project.css">
 
-  <!-- Custom JS -->
-  <script type="text/javascript" src="scripts.js" defer></script>
-
-  <!-- Google reCAPTCHA -->
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-
 </head>
 
 
@@ -98,35 +92,35 @@
   <form>
 
     <div class="form-group row">
-        <label for="inputName1" class="col-sm-2 col-form-label">Project Name</label>
-        <input type="text" class="form-control" placeholder="Image rasteriser" id="inputName1" aria-describedby="inputName1" >
+        <label for="inputProjectName" class="col-sm-2 col-form-label">Project Name</label>
+        <input type="text" class="form-control" placeholder="Image rasteriser" id="inputProjectName" >
     </div>
 
     <div class="form-group row">
-      <label for="inputEmal1" class="col-sm-2 col-form-label">Demo link</label>
-      <input type="email" class="form-control" placeholder="https://codesandbox.io/embed/github/ZsakaiBalint/image-rasterizer/main?view=preview" id="inputEmal1">
+      <label for="inputDemoLink" class="col-sm-2 col-form-label">Demo link</label>
+      <input type="email" class="form-control" placeholder="https://codesandbox.io/embed/github/ZsakaiBalint/image-rasterizer/main?view=preview" id="inputDemoLink">
     </div>
 
     <div class="form-group row">
-      <label for="inputEmal1" class="col-sm-2 col-form-label">Source code link</label>
-      <input type="email" class="form-control" placeholder="https://github.com/ZsakaiBalint/image-rasterizer" id="inputEmal1">
+      <label for="inputSourceCodeLink" class="col-sm-2 col-form-label">Source code link</label>
+      <input type="email" class="form-control" placeholder="https://github.com/ZsakaiBalint/image-rasterizer" id="inputSourceCodeLink">
     </div>
 
     <div class="form-group row">
-      <label for="inputEmal1" class="col-sm-2 col-form-label">Documentation link</label>
-      <input type="email" class="form-control" placeholder="https://github.com/ZsakaiBalint/image-rasterizer/wiki" id="inputEmal1">
+      <label for="inputDocumentationLink" class="col-sm-2 col-form-label">Documentation link</label>
+      <input type="email" class="form-control" placeholder="https://github.com/ZsakaiBalint/image-rasterizer/wiki" id="inputDocumentationLink">
     </div>
 
     <div class="form-group row">
-      <label for="messageInput1" class="col-sm-2 col-form-label">Project Description</label>
+      <label for="inputProjectDescription" class="col-sm-2 col-form-label">Project Description</label>
       <textarea 
       placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." 
-      class="form-control" id="messageInput" rows="10"></textarea>
+      class="form-control" id="inputProjectDescription" rows="10"></textarea>
     </div>
 
     <div class="form-group row">
-      <label for="files" class="col-sm-2 col-form-label">Upload images and videos</label>
-      <input type="file" id="files" name="files" multiple><br><br>
+      <label for="inputProjectGallery" class="col-sm-2 col-form-label">Upload images and videos</label>
+      <input type="file" id="inputProjectGallery" multiple><br><br>
     </div>
 
     <button type="submit" class="btn btn-primary">Publish Project</button>

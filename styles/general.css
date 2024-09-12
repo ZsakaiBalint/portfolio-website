@@ -50,3 +50,7 @@ html {
 .flexcontainer {
   display: flex;
 }
+
+li a {
+  text-align: center;
+}
