@@ -147,6 +147,10 @@
     padding-top: 60px;
   }
 
+  #form-section {
+    padding-top: 60px;
+  }
+
   #project a {
     all: unset;
   }

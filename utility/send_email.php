@@ -32,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     if (!empty($_SESSION['mail-sending-error'])) {
-        header("Location: index.html#projects-section");
+        header("Location: index.html#form-section");
         exit();
     }
     
