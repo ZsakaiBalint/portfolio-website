@@ -27,7 +27,7 @@
   <link rel="stylesheet" href="styles/footer.css">
 
   <!-- Custom JS -->
-  <script type="text/javascript" src="scripts/index.js" defer></script>
+  <script src="./script.js" async defer></script>
 
   <!-- Google reCAPTCHA -->
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
@@ -58,7 +58,6 @@
         <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
         <li><a href="./about.html">About me</a></li>
         <li><a href="#projects-section">Projects</a></li>
-        <li><a href="./new_project.html">*Admin* New project</a></li>
       </ul>
 
       <ul class="nav navbar-nav navbar-right">
@@ -85,18 +84,21 @@
     <div class="container">
       <div class="jumbotron-row row">
         <div class="jumbotron-image-div col-12 col-lg-6">
-          <img src="images/profile_image.jpg" class="jumbotron-image img-fluid img-circle" alt="profile image">
+          <img src="images/profile_image.webp" class="jumbotron-image img-fluid img-circle" alt="profile image">
         </div>
         <div class="jumbotron-text col-12 col-lg-6 ">
           <h1>Hi, my name is Bálint Zsákai</h1>
           <h3>I'm a backend-developer,</h3>
           <p>and this is my portfolio website.</p>
 
-          <div class="button-container projectButtonDiv">
-            <button id="projectsButton" type="button" class="btn btn-secondary btn-lg">
+         
+            
+           
+            <button onclick="window.location.href='#projects-section';" id="projectsButton" type="button" class="btn btn-secondary btn-lg">
               <i class="fa-solid fa-rocket"></i> 
               <b>View my projects</b>
             </button>
+
           </div>
         </div>
 
@@ -113,149 +115,11 @@
       <h3 class="roboto-mono-custom">
         I'm a passionate backend developer with over 3 years of experience in designing, developing, 
         and maintaining robust and scalable server-side applications. My expertise lies in leveraging technologies like 
-        PHP, Symfony, Node.js and MySQL to build efficient and secure backend solutions.
+        PHP, Node.js and MySQL to build efficient and secure backend solutions.
       </h3>
     </div>
   </div>
 </div>
-
-<div class="container margin-top">
-  <div class="flexcontainer row text-center">
-
-    <div class="col-12">
-      <h1><i class="fa-solid fa-code"></i></h1>
-      <h2 class="margin-bottom"> <kbd>Technologies I use daily</kbd> </h2>
-    </div>
-  </div>
-</div>
-
-<div class="container">
-  <div class="flexcontainer row text-center">
-    <div class="col-12 col-md-6">
-      <ul class="list-group">
-        <h4 class="list-group-item stack-item roboto-mono-custom" data-status="inactive"><i class="fa-brands fa-symfony"></i>      Symfony</h4>
-        <h4 class="list-group-item item-description roboto-mono-custom">
-          Symfony is a powerful and flexible open-source PHP framework 
-          designed for building complex web applications and APIs. It provides a robust foundation 
-          for developers to create scalable and maintainable web projects with a structured approach. 
-          Symfony is known for its high performance, modularity, and extensive ecosystem.
-          <br>
-          <a href="https://symfony.com/" target="_blank">
-            <button type="button" class="btn btn-info"> Symfony website</button>
-          </a>
-        </h4>
-      
-        <h4 class="list-group-item stack-item roboto-mono-custom" data-status="inactive"><i class="fa-solid fa-link"></i>          Doctrine</h4>
-        <h4 class="list-group-item item-description roboto-mono-custom">
-          Doctrine is a powerful Object-Relational Mapping (ORM) library for PHP. It simplifies database interactions by 
-          mapping PHP objects to database tables, allowing developers to work with databases using PHP code instead of SQL. 
-          Doctrine is known for its flexibility, performance, and support for complex database relationships, making it an 
-          essential tool for building robust and maintainable web applications.
-          <br>
-          <a href="https://www.doctrine-project.org/" target="_blank">
-            <button type="button" class="btn btn-info"> Doctrine website</button>
-          </a>
-        </h4>
-
-        <h4 class="list-group-item stack-item roboto-mono-custom" data-status="inactive"><i class="fa-solid fa-database"></i>      Postgre SQL</h4>
-        <h4 class="list-group-item item-description roboto-mono-custom">
-          PostgreSQL is a powerful, open-source relational database management system known for its reliability, scalability, 
-          and extensive feature set. It supports advanced data types and performance optimization, making it a preferred choice 
-          for complex web applications and data-driven projects. PostgreSQL's robust architecture and active community contribute 
-          to its continuous improvement and widespread adoption.
-          <br>
-          <a href="https://www.postgresql.org/" target="_blank">
-            <button type="button" class="btn btn-info"> PostgreSQL website</button>
-          </a>
-        </h4>
-
-        <h4 class="list-group-item stack-item roboto-mono-custom" data-status="inactive"><i class="fa-brands fa-js"></i>           JavaScript (Node.js)</h4>
-        <h4 class="list-group-item item-description roboto-mono-custom">
-          JavaScript (Node.js) is a versatile runtime environment that allows developers to execute JavaScript on the server-side. 
-          It enables the creation of fast, scalable network applications and real-time services. Node.js leverages the power of 
-          JavaScript, its non-blocking I/O model, and a vast ecosystem of modules to build efficient, event-driven applications 
-          that can handle numerous simultaneous connections with high throughput.
-          <br>
-          <a href="https://nodejs.org/" target="_blank">
-            <button type="button" class="btn btn-info"> Node.js website</button>
-          </a>
-        </h4>
-
-        <h4 class="list-group-item stack-item roboto-mono-custom" data-status="inactive"><i class="fa-solid fa-lock"></i>          JWT</h4>
-        <h4 class="list-group-item item-description roboto-mono-custom">
-          JSON Web Token (JWT) is a compact, URL-safe means of representing claims to be transferred between two parties. It is 
-          commonly used for authentication and authorization in web applications, allowing secure and efficient transfer of 
-          user information. JWT's standardized structure and cryptographic security ensure data integrity and trustworthiness 
-          across different systems and platforms.
-          <br>
-          <a href="https://jwt.io/" target="_blank">
-            <button type="button" class="btn btn-info"> JWT website</button>
-          </a>
-        </h4>
-
-        <h4 class="list-group-item stack-item roboto-mono-custom" data-status="inactive"><i class="fa-brands fa-git"></i>          Git</h4>
-        <h4 class="list-group-item item-description roboto-mono-custom">
-          Git is a distributed version control system designed to handle everything from small to very large projects with speed 
-          and efficiency. It allows multiple developers to collaborate on code, track changes, and manage project history. Git's 
-          branching and merging capabilities, combined with its robust ecosystem of tools, make it an indispensable tool for 
-          modern software development.
-          <br>
-          <a href="https://git-scm.com/" target="_blank">
-            <button type="button" class="btn btn-info"> Git website</button>
-          </a>
-        </h4>
-
-        <h4 class="list-group-item stack-item roboto-mono-custom" data-status="inactive"><i class="fa-brands fa-github"></i>       GitHub</h4>
-        <h4 class="list-group-item item-description roboto-mono-custom">
-          GitHub is a web-based platform that provides hosting for Git repositories. It offers a suite of collaborative features 
-          such as bug tracking, feature requests, task management, and wikis for every project. GitHub's integration with Git 
-          enables seamless code collaboration and sharing, making it an essential tool for developers and open-source projects 
-          around the world.
-          <br>
-          <a href="https://github.com/" target="_blank">
-            <button type="button" class="btn btn-info"> GitHub website</button>
-          </a>
-        </h4>
-
-        <h4 class="list-group-item stack-item roboto-mono-custom" data-status="inactive"><i class="fa-brands fa-docker"></i>       Docker</h4>
-        <h4 class="list-group-item item-description roboto-mono-custom">
-          Docker is an open platform for developing, shipping, and running applications in containers. It enables developers to 
-          package applications with all their dependencies into a standardized unit for software development. Docker containers 
-          ensure consistency across multiple development and production environments, streamlining the deployment process and 
-          improving resource efficiency.
-          <br>
-          <a href="https://www.docker.com/" target="_blank">
-            <button type="button" class="btn btn-info"> Docker website</button>
-          </a>
-        </h4>
-
-        <h4 class="list-group-item stack-item roboto-mono-custom" data-status="inactive"><i class="fa-solid fa-square-check"></i>  PHPUnit</h4>
-        <h4 class="list-group-item item-description roboto-mono-custom">
-          PHPUnit is a popular testing framework for PHP, designed to support test-driven development. It provides a wide range 
-          of assertions and tools to create, organize, and execute tests, ensuring code quality and reliability. PHPUnit's 
-          integration with continuous integration systems and its extensive documentation make it a valuable tool for maintaining 
-          robust and error-free PHP applications.
-          <br>
-          <a href="https://phpunit.de/" target="_blank">
-            <button type="button" class="btn btn-info"> PHPUnit website</button>
-          </a>
-        </h4>
-      </ul>
-    </div>
-
-    <div id="stack-item-col" class="col-12 col-md-6">
-      <ul class="list-group">
-        <h4 id="description-pc" class="list-group-item item-description roboto-mono-custom">
-          <!-- item description goes here on pc view -->
-        </h4>
-      </ul>
-    </div>
-    </div>
-
-  </div>
-</div>
-
-
 
 <!-- Projects section -->
 <div id="projects-section" class="container margin-top">
@@ -273,12 +137,23 @@
   <div id="projects" class="flexcontainer row text-center">
 
     <div class="col-12 col-md-4 col-sm-6 project">
-      <div class="button-container">
-        <button type="button" class="btn btn-secondary edit-button"><i class="fa-solid fa-pen-to-square"></i></button>
-        <button type="button" class="btn btn-secondary delete-button"><i class="fa-solid fa-trash"></i></button>
-      </div>
+      <a href="projects/tic_tac_toe.html">
       <div class="project-inner">
-        <a href="project.html">
+          <img src="images/tic_tac_toe.webp" class="img-fluid img-rounded" alt="profile image">
+          <h2 class="bebas-neue-regular"><i class="fa-solid fa-terminal"></i> Multiplayer Tic-Tac-Toe</h2>
+          <div class="project-description">
+            <h4 class="roboto-mono-custom">
+              Challenge your friends or play against the computer!
+            </h4>
+          </div>
+      </div>
+      </a>
+    </div>
+
+    <!--
+    <div class="col-12 col-md-4 col-sm-6 project">
+      <a href="project.html">
+      <div class="project-inner">
           <img src="images/project1.jpg" class="img-fluid img-rounded" alt="profile image">
           <h2 class="bebas-neue-regular"><i class="fa-solid fa-terminal"></i> Project name 1</h2>
           <div class="project-description">
@@ -287,86 +162,10 @@
               Ut aliquam purus sit amet. 
             </h4>
           </div>
-        </a>
       </div>
+      </a>
     </div>
-
-    <div class="col-12 col-md-4 col-sm-6 project">
-      <div class="button-container">
-        <button type="button" class="btn btn-secondary edit-button"><i class="fa-solid fa-pen-to-square"></i></button>
-        <button type="button" class="btn btn-secondary delete-button"><i class="fa-solid fa-trash"></i></button>
-      </div>
-      <div class="project-inner">
-        <a href="project.html">
-          <img src="images/project2.jpg" class="img-fluid img-rounded" alt="profile image">
-          <h2 class="bebas-neue-regular"><i class="fa-solid fa-terminal"></i> Project name 2</h2>
-          <div class="project-description">
-            <h4 class="roboto-mono-custom">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-              Ut aliquam purus sit amet.
-            </h4>
-          </div>
-        </a>
-      </div>
-    </div>
-
-    <div class="col-12 col-md-4 col-sm-6 project">
-      <div class="button-container">
-        <button type="button" class="btn btn-secondary edit-button"><i class="fa-solid fa-pen-to-square"></i></button>
-        <button type="button" class="btn btn-secondary delete-button"><i class="fa-solid fa-trash"></i></button>
-      </div>
-      <div class="project-inner">
-        <a href="project.html">
-          <img src="images/project3.jpg" class="img-fluid img-rounded" alt="profile image">
-          <h2 class="bebas-neue-regular"><i class="fa-solid fa-terminal"></i> Project name 3</h2>
-          <div class="project-description">
-            <h4 class="roboto-mono-custom">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-              Ut aliquam purus sit amet.
-            </h4>
-          </div>
-        </a>
-      </div>
-    </div>
-
-    <div class="col-12 col-md-4 col-sm-6 project">
-      <div class="button-container">
-        <button type="button" class="btn btn-secondary edit-button"><i class="fa-solid fa-pen-to-square"></i></button>
-        <button type="button" class="btn btn-secondary delete-button"><i class="fa-solid fa-trash"></i></button>
-      </div>
-      <div class="project-inner">
-        <a href="project.html">
-          <img src="images/project4.jpg" class="img-fluid img-rounded" alt="profile image">
-          <h2 class="bebas-neue-regular"><i class="fa-solid fa-terminal"></i> Project name 4</h2>
-            <div class="project-description">
-            <h4 class="roboto-mono-custom">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-              Ut aliquam purus sit amet.
-            </h4>
-          </div>
-        </a>
-      </div>
-    </div>
-
-    <div class="col-12 col-md-4 col-sm-6 project">
-      <div class="button-container">
-        <button type="button" class="btn btn-secondary edit-button"><i class="fa-solid fa-pen-to-square"></i></button>
-        <button type="button" class="btn btn-secondary delete-button"><i class="fa-solid fa-trash"></i></button>
-      </div>
-      <div class="project-inner">
-        <a href="project.html">
-          <img src="images/project5.jpg" class="img-fluid img-rounded" alt="profile image">
-          <h2 class="bebas-neue-regular"><i class="fa-solid fa-terminal"></i> Project name 5</h2>
-          <div class="project-description">
-            <h4 class="roboto-mono-custom">
-              Nulla facilisi etiam dignissim diam quis enim. Facilisi 
-              etiam dignissim diam quis enim lobortis scelerisque fermentum dui. Arcu non sodales neque sodales ut etiam sit. A erat nam 
-              at lectus urna. 
-            </h4>
-          </div>
-        </a>
-      </div>
-    </div>
+    -->
 
   </div>
 </div>
@@ -384,29 +183,30 @@
 </div>
 
 <div class="form container text-center roboto-mono-custom">
-  <form>
+  <form method="post" action="send_email.php">
 
     <div class="form-group row">
         <label for="inputName" class="col-sm-2 col-form-label">Name</label>
         <input type="text" class="form-control" placeholder="John Done" id="inputName" aria-describedby="inputName1" >
-        <p class="red">^ Name field is mandatory!</p>
+        <p class="hidden red">^ Name field is mandatory!</p>
     </div>
 
     <div class="form-group row">
       <label for="inputEmal" class="col-sm-2 col-form-label">Email</label>
       <input type="email" class="form-control" placeholder="johndoe123@fubarmail.com" id="inputEmal">
-      <p class="red">^ Email field is mandatory!</p>
+      <p class="hidden red">^ Email field is mandatory!</p>
     </div>
 
     <div class="form-group row">
       <label for="inputMessage" class="col-sm-2 col-form-label">Message</label>
       <textarea placeholder="Your message..." class="form-control" id="inputMessage" rows="10"></textarea>
-      <p class="red">^ Message field is mandatory!</p>
+      <p class="hidden red">^ Message field is mandatory!</p>
     </div>
 
     <div class="form-check eula">
       <input type="checkbox" class="form-check-input" id="inputCheckTerms">
       <label for="inputCheckTerms" class="form-check-label">I accept the <a href="#projects">Terms of Service</a> and <a href="#project">Privacy Policy</a>. </label>
+      <p class="hidden red">^ This checkbox is mandatory!</p>
     </div>
 
     <button type="submit" class="btn btn-primary">Send message</button>

@@ -8,7 +8,7 @@
   }
   
   .jumbotron-row {
-    background-image: url('../images/tropical.png');
+    background-image: url('../images/tropical.webp');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -136,7 +136,7 @@
     display: flex;
     align-items: stretch;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    /* justify-content: flex-start; */
   }
   
   #projectsButton {
@@ -145,6 +145,10 @@
   
   #projects-section {
     padding-top: 60px;
+  }
+
+  #project a {
+    all: unset;
   }
   
   #projects img {
@@ -351,12 +355,48 @@
     margin-top: 50px;
   }
 
+input[type="checkbox"] {
+  transform: scale(1.5); 
+  -webkit-transform: scale(1.5); 
+  -moz-transform: scale(1.5); 
+  -ms-transform: scale(1.5); 
+  -o-transform: scale(1.5);
+  position: relative; 
+  top: 3px; 
+  right: 3px;
+  margin-bottom: 20px;
+}
 
+.hidden {
+  display: hidden;
+}
 
+button::after {
+  background-color: black;
+}
 
+#projects a {
+  text-decoration: none; /* Remove underline */
+  color: inherit; /* Inherit text color from parent */
+}
 
+#projects a:hover {
+  text-decoration: none; /* No underline on hover */
+  color: inherit; /* No color change on hover */
+}
 
+.project a {
+  display: block; /* Make the anchor behave as a block element */
+}
 
+.project-inner {
+  padding: 10px; /* Adjust padding to ensure space inside */
+  background-color: white; /* Set the background to make it distinct */
+  border-radius: 8px; /* Smooth corners */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+}
 
-
-  
+.project-inner:hover {
+  box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+  transition: box-shadow 0.3s ease-in-out; /* Smooth transition */
+}
