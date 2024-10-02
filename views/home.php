@@ -68,7 +68,7 @@
   <div id="projects" class="flexcontainer row text-center">
 
     <div class="col-12 col-md-4 col-sm-6 project">
-      <a href="/projects/tic_tac_toe">
+      <a href="/tic_tac_toe">
       <div class="project-inner">
           <img src="images/tic_tac_toe.webp" class="img-fluid img-rounded" alt="profile image">
           <h2 class="bebas-neue-regular"><i class="fa-solid fa-terminal"></i> Multiplayer Tic-Tac-Toe</h2>

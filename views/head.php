@@ -23,6 +23,7 @@
   <link rel="stylesheet" href="styles/index.css">
   <link rel="stylesheet" href="styles/navbar.css">
   <link rel="stylesheet" href="styles/footer.css">
+  <link rel="stylesheet" href="styles/project.css">
 
   <!-- Custom JS -->
   <script src="./script.js" async defer></script>

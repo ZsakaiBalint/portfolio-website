@@ -10,8 +10,13 @@ return [
         include 'views/about.php';
     },
 
-    '/project' => function () {
-        include 'views/project.php';
+    '/form' => function () {
+        header('Location: /#form-section');
+        exit();
+    },
+    
+    '/error' => function () {
+        include 'views/404.php';
     },
 
     '/projects' => function () {
@@ -19,12 +24,10 @@ return [
         exit();
     },
 
-    '/form' => function () {
-        header('Location: /#form-section');
-        exit();
+    '/tic_tac_toe' => function () {
+        include 'views/tic_tac_toe.php';
     },
 
-    '/error' => function () {
-        include 'views/404.php';
-    } 
+
+
 ];
