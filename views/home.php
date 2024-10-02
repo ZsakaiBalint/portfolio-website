@@ -1,14 +1,16 @@
+<?php session_start(); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
 
-<?php require __DIR__ . '/head.php'; ?>
+<?php require __DIR__ . '\head.php'; ?>
 
 
 <body>
 
 
-<?php require __DIR__ . '/navbar.php'; ?>
+<?php require __DIR__ . '\navbar.php'; ?>
 
 
 <!-- Jumbotron -->
@@ -66,7 +68,7 @@
   <div id="projects" class="flexcontainer row text-center">
 
     <div class="col-12 col-md-4 col-sm-6 project">
-      <a href="projects/tic_tac_toe.html">
+      <a href="/projects/tic_tac_toe">
       <div class="project-inner">
           <img src="images/tic_tac_toe.webp" class="img-fluid img-rounded" alt="profile image">
           <h2 class="bebas-neue-regular"><i class="fa-solid fa-terminal"></i> Multiplayer Tic-Tac-Toe</h2>
@@ -81,7 +83,7 @@
 
     <!--
     <div class="col-12 col-md-4 col-sm-6 project">
-      <a href="project.html">
+      <a href="/projects/tic_tac_toe">
       <div class="project-inner">
           <img src="images/project1.jpg" class="img-fluid img-rounded" alt="profile image">
           <h2 class="bebas-neue-regular"><i class="fa-solid fa-terminal"></i> Project name 1</h2>
@@ -116,32 +118,72 @@
 
     <div class="form-group row">
         <label for="inputName" class="col-sm-2 col-form-label">Name</label>
-        <input type="text" class="form-control" placeholder="John Done" id="inputName" aria-describedby="inputName1" >
-        <p class="hidden red">^ Name field is mandatory!</p>
+        <input type="text" class="form-control" placeholder="John Done" id="inputName" aria-describedby="inputName1" 
+        value="<?php 
+        echo isset($_SESSION['form_data']['name']) ? htmlspecialchars($_SESSION['form_data']['name']) : ''; 
+        ?>">
+
+        <?php 
+          if (isset($_SESSION['mail-sending-error']) && !empty($_SESSION['mail-sending-error'])) {
+            $containsNameError = !empty(array_filter($_SESSION['mail-sending-error'], fn($error) => stripos($error, 'name') !== false));
+    
+            if ($containsNameError) {
+                echo '<p class="red">^ Name field is mandatory!</p>';
+            }
+          }
+        ?>
     </div>
 
     <div class="form-group row">
       <label for="inputEmal" class="col-sm-2 col-form-label">Email</label>
       <input type="email" class="form-control" placeholder="johndoe123@fubarmail.com" id="inputEmal">
-      <p class="hidden red">^ Email field is mandatory!</p>
+      <?php 
+          if (isset($_SESSION['mail-sending-error']) && !empty($_SESSION['mail-sending-error'])) {
+            $containsNameError = !empty(array_filter($_SESSION['mail-sending-error'], fn($error) => stripos($error, 'email') !== false));
+    
+            if ($containsNameError) {
+                echo '<p class="red">^ Email field is mandatory!</p>';
+            }
+          }
+        ?>
     </div>
 
     <div class="form-group row">
       <label for="inputMessage" class="col-sm-2 col-form-label">Message</label>
       <textarea placeholder="Your message..." class="form-control" id="inputMessage" rows="10"></textarea>
-      <p class="hidden red">^ Message field is mandatory!</p>
+      <?php 
+        if (isset($_SESSION['mail-sending-error']) && !empty($_SESSION['mail-sending-error'])) {
+          $containsNameError = !empty(array_filter($_SESSION['mail-sending-error'], fn($error) => stripos($error, 'message') !== false));
+  
+          if ($containsNameError) {
+              echo '<p class="red">^ Message field is mandatory!</p>';
+          }
+        }
+      ?>
     </div>
 
     <div class="form-check eula">
       <input type="checkbox" class="form-check-input" id="inputCheckTerms">
       <label for="inputCheckTerms" class="form-check-label">I accept the <a href="#projects">Terms of Service</a> and <a href="#project">Privacy Policy</a>. </label>
-      <p class="hidden red">^ This checkbox is mandatory!</p>
+      <?php 
+        if (isset($_SESSION['mail-sending-error']) && !empty($_SESSION['mail-sending-error'])) {
+          $containsNameError = !empty(array_filter($_SESSION['mail-sending-error'], fn($error) => stripos($error, 'message') !== false));
+  
+          if ($containsNameError) {
+              echo '<p class="red">^ This checkbox is mandatory!</p>';
+          }
+        }
+      ?>
     </div>
 
     <button type="submit" class="btn btn-primary">Send message</button>
 
   </form>
 </div>
+
+
+
+
 
 
 <?php require __DIR__ . '/footer.php'; ?>

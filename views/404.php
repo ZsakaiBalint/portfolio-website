@@ -33,6 +33,10 @@
 
 </head>
 
-<h1>404 :/</h1>
+<div class="text-center">
+  <h1>Oops!</h1>
+  <h2>This page is not found...</h2>
+</div>
+
 
 </html>
