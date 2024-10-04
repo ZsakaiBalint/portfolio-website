@@ -25,19 +25,6 @@
                         <a href="/projects">Projects</a>
                     </li>
                 </ul>
-
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                            <img src="https://flagcdn.com/16x12/gb.png" srcset="https://flagcdn.com/32x24/gb.png 2x,https://flagcdn.com/48x36/gb.png 3x" width="16" height="12" alt="United Kingdom"> EN
-                            <span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-fst" href="#"><img src="https://flagcdn.com/16x12/gb.png" srcset="https://flagcdn.com/32x24/gb.png 2x,https://flagcdn.com/48x36/gb.png 3x" width="16" height="12" alt="United Kingdom"> EN</a></li>
-                            <li><a class="dropdown-snd" href="#"><img src="https://flagcdn.com/16x12/hu.png" srcset="https://flagcdn.com/32x24/hu.png 2x,https://flagcdn.com/48x36/hu.png 3x" width="16" height="12" alt="Hungary"> HU</a></li>
-                        </ul>
-                    </li>
-                </ul>
             </div>
             <!-- /.navbar-collapse -->
         </div>

@@ -67,36 +67,49 @@
 
   <div id="projects" class="flexcontainer row text-center">
 
-    <div class="col-12 col-md-4 col-sm-6 project">
-      <a href="/tic_tac_toe">
-      <div class="project-inner">
-          <img src="images/tic_tac_toe.webp" class="img-fluid img-rounded" alt="profile image">
-          <h2 class="bebas-neue-regular"><i class="fa-solid fa-terminal"></i> Multiplayer Tic-Tac-Toe</h2>
-          <div class="project-description">
-            <h4 class="roboto-mono-custom">
-              Challenge your friends or play against the computer!
-            </h4>
-          </div>
-      </div>
-      </a>
-    </div>
+  <div class="container-fluid project">
+    <a href="/tic_tac_toe">
+        <div class="row project-inner">
+            <div class="col-12 col-md-6 image-column"> <!-- Use col-12 for small screens -->
+                <img src="images/tic_tac_toe.webp" class="img-fluid img-rounded" alt="profile image">
+            </div>
+            <div class="col-12 col-md-6 text-column"> <!-- Use col-12 for small screens -->
 
-    <!--
-    <div class="col-12 col-md-4 col-sm-6 project">
-      <a href="/projects/tic_tac_toe">
-      <div class="project-inner">
-          <img src="images/project1.jpg" class="img-fluid img-rounded" alt="profile image">
-          <h2 class="bebas-neue-regular"><i class="fa-solid fa-terminal"></i> Project name 1</h2>
-          <div class="project-description">
-            <h4 class="roboto-mono-custom">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-              Ut aliquam purus sit amet. 
-            </h4>
-          </div>
-      </div>
+                <div>
+                  <h2 class="bebas-neue-regular"><i class="fa-solid fa-terminal"></i> Multiplayer Tic-Tac-Toe</h2>
+                  <div class="project-description">
+                      <h4 class="roboto-mono-custom">
+                          Challenge your friends or play against the computer!
+                      </h4>
+                  </div>
+                </div>
+
+            </div>
+        </div>
       </a>
-    </div>
-    -->
+  </div>
+
+  <div class="container-fluid project">
+    <a href="/tic_tac_toe">
+        <div class="row project-inner">
+            <div class="col-12 col-md-6 image-column"> <!-- Use col-12 for small screens -->
+                <img src="images/tic_tac_toe.webp" class="img-fluid img-rounded" alt="profile image">
+            </div>
+            <div class="col-12 col-md-6 text-column"> <!-- Use col-12 for small screens -->
+
+                <div>
+                  <h2 class="bebas-neue-regular"><i class="fa-solid fa-terminal"></i> Multiplayer Tic-Tac-Toe</h2>
+                  <div class="project-description">
+                      <h4 class="roboto-mono-custom">
+                          Challenge your friends or play against the computer!
+                      </h4>
+                  </div>
+                </div>
+                
+            </div>
+        </div>
+      </a>
+  </div>
 
   </div>
 </div>
@@ -157,20 +170,6 @@
   
           if ($containsNameError) {
               echo '<p class="red">^ Message field is mandatory!</p>';
-          }
-        }
-      ?>
-    </div>
-
-    <div class="form-check eula">
-      <input type="checkbox" class="form-check-input" id="inputCheckTerms">
-      <label for="inputCheckTerms" class="form-check-label">I accept the <a href="#projects">Terms of Service</a> and <a href="#project">Privacy Policy</a>. </label>
-      <?php 
-        if (isset($_SESSION['mail-sending-error']) && !empty($_SESSION['mail-sending-error'])) {
-          $containsNameError = !empty(array_filter($_SESSION['mail-sending-error'], fn($error) => stripos($error, 'message') !== false));
-  
-          if ($containsNameError) {
-              echo '<p class="red">^ This checkbox is mandatory!</p>';
           }
         }
       ?>

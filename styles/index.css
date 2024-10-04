@@ -128,9 +128,6 @@
     display: none;
   }
 
-
-
-
   /* projects */
 #projects {
     display: flex;
@@ -154,6 +151,14 @@
   #project a {
     all: unset;
   }
+
+  .project img {
+    max-width: 300px;
+    width: 100%; 
+    height: auto; 
+    transition: max-width 0.3s ease;
+    
+}
   
   #projects img {
     width: 70%;
@@ -172,13 +177,21 @@
   }
   
   .project-inner {
-    border: 3px solid black;
-    border-radius: 20px;
-  }
+    display: flex; /* Use flexbox for horizontal layout */
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    align-items: center;
+}
   
   .project-inner a {
     text-decoration: none;  /* Remove underline */
     color: inherit;         /* Inherit the text color from the parent */
+  }
+
+  @media (max-width: 992px) {
+    .project-inner {
+      display: flex;
+      justify-content: center;
+    }
   }
   
   .project-description {
@@ -329,7 +342,9 @@
   }
   
   .form {
-    width: 60%;
+    width: 75%;
+    border: 3px solid black;
+    border-radius: 10px;
   }
   
   .form-group label {
@@ -340,6 +355,11 @@
     background-color: #2c4729;
     cursor: pointer;
     color: white;
+    margin-bottom: 10px;
+  }
+
+  .navbar a {
+    border-radius: 10px;
   }
   
   .form button:hover {

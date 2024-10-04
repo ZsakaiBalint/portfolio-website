@@ -6,6 +6,11 @@ function run(string $url, array $routes): void
     $uri = parse_url($url);
     $path = $uri['path'];
 
+    // Block access to all php files
+    if (strpos($path, '.php') !== false) {
+        $path = '/error'; // Redirect to error route
+    }
+
     // If the path is empty or '/', map it to '/'
     if ($path === '' || $path === '/' || $path === '/index.php') {
         $path = '/';
