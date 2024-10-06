@@ -67,27 +67,7 @@
 
   <div id="projects" class="flexcontainer row text-center">
 
-  <div class="container-fluid project">
-    <a href="/tic_tac_toe">
-        <div class="row project-inner">
-            <div class="col-12 col-md-6 image-column"> <!-- Use col-12 for small screens -->
-                <img src="images/tic_tac_toe.webp" class="img-fluid img-rounded" alt="profile image">
-            </div>
-            <div class="col-12 col-md-6 text-column"> <!-- Use col-12 for small screens -->
-
-                <div>
-                  <h2 class="bebas-neue-regular"><i class="fa-solid fa-terminal"></i> Multiplayer Tic-Tac-Toe</h2>
-                  <div class="project-description">
-                      <h4 class="roboto-mono-custom">
-                          Challenge your friends or play against the computer!
-                      </h4>
-                  </div>
-                </div>
-
-            </div>
-        </div>
-      </a>
-  </div>
+  
 
   <div class="container-fluid project">
     <a href="/tic_tac_toe">
@@ -115,69 +95,62 @@
 </div>
 
 
-<!-- Form section -->
-<div id="form-section" class="container margin-top">
-  <div class="flexcontainer row text-center">
 
-    <div class="col-12">
-      <h1><i class="fa-regular fa-message"></i></h1>
-      <h2 class="margin-bottom"> <kbd>Send me a message!</kbd></h2>
+
+
+<div id="form-section" class="container margin-top">
+    <div class="flexcontainer row text-center">
+        <div class="col-12">
+            <h1><i class="fa-regular fa-message"></i></h1>
+            <h2 class="margin-bottom"> <kbd>Send me a message!</kbd></h2>
+        </div>
     </div>
-  </div>
 </div>
 
 <div class="form container text-center roboto-mono-custom">
-  <form method="post" action="../utility/send_email.php">
-
+<form method="post" action="../utility/send_email.php">
     <div class="form-group row">
         <label for="inputName" class="col-sm-2 col-form-label">Name</label>
-        <input type="text" class="form-control" placeholder="John Done" id="inputName" aria-describedby="inputName1" 
-        value="<?php 
-        echo isset($_SESSION['form_data']['name']) ? htmlspecialchars($_SESSION['form_data']['name']) : ''; 
-        ?>">
+        <input type="text" name="name" class="form-control" placeholder="John Done" id="inputName"
+            value="<?php echo isset($_SESSION['form_data']['name']) ? htmlspecialchars($_SESSION['form_data']['name']) : ''; ?>">
 
         <?php 
-          if (isset($_SESSION['mail-sending-error']) && !empty($_SESSION['mail-sending-error'])) {
-            $containsNameError = !empty(array_filter($_SESSION['mail-sending-error'], fn($error) => stripos($error, 'name') !== false));
-    
-            if ($containsNameError) {
-                echo '<p class="red">^ Name field is mandatory!</p>';
-            }
-          }
-        ?>
-    </div>
-
-    <div class="form-group row">
-      <label for="inputEmal" class="col-sm-2 col-form-label">Email</label>
-      <input type="email" class="form-control" placeholder="johndoe123@fubarmail.com" id="inputEmal">
-      <?php 
-          if (isset($_SESSION['mail-sending-error']) && !empty($_SESSION['mail-sending-error'])) {
-            $containsNameError = !empty(array_filter($_SESSION['mail-sending-error'], fn($error) => stripos($error, 'email') !== false));
-    
-            if ($containsNameError) {
-                echo '<p class="red">^ Email field is mandatory!</p>';
-            }
-          }
-        ?>
-    </div>
-
-    <div class="form-group row">
-      <label for="inputMessage" class="col-sm-2 col-form-label">Message</label>
-      <textarea placeholder="Your message..." class="form-control" id="inputMessage" rows="10"></textarea>
-      <?php 
-        if (isset($_SESSION['mail-sending-error']) && !empty($_SESSION['mail-sending-error'])) {
-          $containsNameError = !empty(array_filter($_SESSION['mail-sending-error'], fn($error) => stripos($error, 'message') !== false));
-  
-          if ($containsNameError) {
-              echo '<p class="red">^ Message field is mandatory!</p>';
-          }
+        // Display error message only after form submission and if there's a "NAME" error
+        if ($_SERVER["REQUEST_METHOD"] == "POST" && in_array("NAME", $_SESSION['mail-sending-error'])) {
+            echo '<p class="red">^ Name field is mandatory!</p>';
         }
-      ?>
+        ?>
+    </div>
+
+    <div class="form-group row">
+        <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
+        <input type="email" name="email" class="form-control" placeholder="johndoe123@fubarmail.com" id="inputEmail"
+            value="<?php echo isset($_SESSION['form_data']['email']) ? htmlspecialchars($_SESSION['form_data']['email']) : ''; ?>">
+
+        <?php 
+        // Display error message only after form submission and if there's an "EMAIL" error
+        if ($_SERVER["REQUEST_METHOD"] == "POST" && in_array("EMAIL", $_SESSION['mail-sending-error'])) {
+            echo '<p class="red">^ Email field is mandatory and must be valid!</p>';
+        }
+        ?>
+    </div>
+
+    <div class="form-group row">
+        <label for="inputMessage" class="col-sm-2 col-form-label">Message</label>
+        <textarea name="message" class="form-control" placeholder="Your message..." id="inputMessage" rows="10"><?php 
+            echo isset($_SESSION['form_data']['message']) ? htmlspecialchars($_SESSION['form_data']['message']) : ''; 
+        ?></textarea>
+
+        <?php 
+        // Display error message only after form submission and if there's a "MESSAGE" error
+        if ($_SERVER["REQUEST_METHOD"] == "POST" && in_array("MESSAGE", $_SESSION['mail-sending-error'])) {
+            echo '<p class="red">^ Message field is mandatory!</p>';
+        }
+        ?>
     </div>
 
     <button type="submit" class="btn btn-primary">Send message</button>
-
-  </form>
+</form>
 </div>
 
 
