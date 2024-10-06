@@ -4,13 +4,13 @@
 <html lang="en">
 
 
-<?php require __DIR__ . '\head.php'; ?>
+<?php require __DIR__ . '/head.php'; ?>
 
 
 <body>
 
 
-<?php require __DIR__ . '\navbar.php'; ?>
+<?php require __DIR__ . '/navbar.php'; ?>
 
 
 <!-- Jumbotron -->
