@@ -1,3 +1,11 @@
+<?php
+if(!defined('APP_ACCESS')) { 
+    http_response_code(404);
+    header("Location: /error");
+    die();
+}
+?>
+
 <!-- Navbar -->
 <div class="container navbar-container">
     <nav class="navbar navbar-default">
@@ -16,13 +24,13 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li class="<?php echo $request === '/' ? 'active' : ''; ?>">
-                        <a href="/">Home <span class="sr-only">(current)</span></a>
+                        <a href="/">Kezdőlap <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="<?php echo $request === '/about' ? 'active' : ''; ?>">
-                        <a href="/about">About me</a>
+                        <a href="/about">Rólam</a>
                     </li>
-                    <li>
-                        <a href="/projects">Projects</a>
+                    <li class="<?php echo $request === '/about' ? 'active' : ''; ?>">
+                        <a href="/blog">Cikkek</a>
                     </li>
                 </ul>
             </div>

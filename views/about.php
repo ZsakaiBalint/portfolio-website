@@ -1,92 +1,107 @@
-<?php session_start(); ?>
+<?php
+if(!defined('APP_ACCESS')) { 
+    http_response_code(404);
+    header("Location: /error");
+    die();
+}
+?>
 
-<!DOCTYPE html>
-<html lang="en">
+<?php 
+require "partials/head.php";
+?>
 
+<?php 
+require "partials/nav.php";
+?>
 
-<?php require __DIR__ . '/head.php'; ?>
-
+<link rel="stylesheet" href="styles/about.css">
 
 <body>
 
-
-<?php require __DIR__ . '/navbar.php'; ?>
-
-
 <div class="container  text-center">
   <div class="col-12">
-    <h1><i class="fa-solid fa-user"></i></h1>
-    <h1 class="margin-bottom"><kbd> About me </kbd></h1>
+    <h1 class="emoji">👨‍💻</h1>
+    <h1 class="margin-bottom"><kbd> Rólam </kbd></h1>
   </div>
 </div>
 
-
-<!-- row 1 -->
 <div class="container margin-top">
   <div class="row text-center">
 
     <div class="col-12 col-md-6">
-      <img class="fluid-image img-rounded" src="images/about_1.jpg" alt="graduation">
+      <img class="fluid-image img-rounded" src="../images/about_1.jpg" alt="graduation">
+      <label> kép forrása: <br>
+        https://www.facebook.com/groups/elteikbsc?locale=hu_HU
+      </label>
     </div>
 
     <div class="col-12 col-md-6">
-      <h2> <kbd>Rough start</kbd> </h2>
-      <h3 class="roboto-mono-custom"> I began my journey into programming and advanced mathematics at university,
-         despite having little prior knowledge. The challenges were significant, but I maintained a positive outlook, 
-         focusing on growth and learning. Overcoming doubts and pushing through difficulties, I stayed determined 
-         in my goal to become a software engineer. My persistence paid off, 
-         and I proudly earned a Bachelor of Science degree in Computer Science. <br>(Budapest, Hungary - ELTE university - 2024)</h3>
+      <h1 class="emoji">🎓</h1>
+      <h1> <kbd>Át kell esni a szakma kezdeti nehézségein.</kbd> </h1> 
+      <h3 class="roboto-mono-custom"> 
+        Diplomát szereztem 2024 nyarán az ELTE programtervező informatikus alapképzésén.
+        Az egyetem alatt sokat tanultam, többek között saját magamról is.
+      </h3>
     </div>
 
   </div>
 </div>
 
-<!-- row 2 -->
 <div class="container margin-top">
   <div class="row text-center">
 
     <div class="col-12 col-md-6">
-      <h2> <kbd>Programming full-time</kbd> </h2>
-      <h3 class="roboto-mono-custom"> Since I turned 16, I gained various experiences by holding several
-         student jobs during my summer breaks in high school and while attending university. 
-         These experiences provided me with a broad skill set by the time I graduated. 
-         Although I was initially uncertain about my career path, I ultimately chose the IT field 
-         because of my long-standing passion for learning and creating. I aim to fully 
-         realize my potential through the use of computers and automation.</h3>
+      <h2 class="emoji">💡</h2>
+      <h2> <kbd>Ebben a szakmában mindig kell tanulni.</kbd> </h2>
+      <h3 class="roboto-mono-custom">
+        Ezzel ellentétben számomra az egyszerűségre törekvés határozza meg a jó szoftverfejlesztőket.
+        Gyakran tapasztalom, hogy könnyű a részletekben és új technológiák választékában elveszni.
+        Jelenleg a PHP nyelvet tanulom, ezen a nyelven írtam ezt a weboldalt is.
+      </h3>
     </div>
 
     <div class="col-12 col-md-6">
-      <img class="fluid-image img-rounded" src="images/about_2.jpg" alt="graduation">
+      <img class="fluid-image img-rounded" src="../images/about_2.jpg" alt="graduation">
+      <label> kép forrása: <br>
+        ...
+      </label>
     </div>
 
   </div>
 </div>
 
-
-<!-- row 3 -->
 <div class="container margin-top">
   <div class="row text-center">
 
     <div class="col-12 col-md-6">
-      <img class="fluid-image img-rounded" src="images/about_3.jpg" alt="graduation">
+      <img class="fluid-image img-rounded" src="../images/about_3.jpg" alt="graduation">
+      <label> kép forrása: <br>
+        ...
+      </label>
     </div>
 
     <div class="col-12 col-md-6">
-      <h2> <kbd>Student for life</kbd> </h2>
-      <h3 class="roboto-mono-custom"> Understanding that a healthy mind thrives in a healthy body, 
-        I enjoy spending my free time gardening and doing street workouts. 
-        Staying active and engaging with others comes naturally to me! 
-        I keep up with my studies at home while working full-time, though I don't plan to 
-        pursue a master's degree in the near future.</h3>
+      <h2 class="emoji"> 🌐 </h>
+      <h2> <kbd>Egy közösség tagjaként</kbd> </h2>
+      <h3 class="roboto-mono-custom">
+        Azok a programozók, akik jól boldogulnak munkájuk során, nem létezhetnek vákumban.
+        Egy programozónak meglepően sok soft-skillre van szüksége.
+        Ilyenek a kommunikáció, csapatmunka és az alkalmazkodóképesség. 
+        Hogy ezeket a készségeimet is fejleszteni tudjam, beléptem a 
+        <a href="https://www.growmesh.io/" target="_blank">mesh.</a>
+        nevű mérnökcsapatba. Itt mindig igyekszünk egymásnak szakmai segítséget nyújtani.
+      </h3>
     </div>
 
   </div>
 </div>
-
-
-<?php require __DIR__ . '/footer.php'; ?>
-
 
 </body>
+
+
+<?php 
+require "partials/footer.php";
+?>
+
 
 </html>

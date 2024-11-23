@@ -1,10 +1,11 @@
 <?php
 
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
+define("APP_ACCESS", true);
 
-include_once 'utility/routing.php';
+include_once "includes/routing/routing.php";
 
-$routes = include_once 'utility/routes.php';
+$routes = include_once "includes/routing/routes.php";
 
-run($_SERVER['REQUEST_URI'], $routes);
+run($_SERVER["REQUEST_URI"], $routes);
+
+?>

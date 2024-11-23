@@ -1,3 +1,11 @@
+<?php
+if(!defined('APP_ACCESS')) { 
+    http_response_code(404);
+    header("Location: /error");
+    die();
+}
+?>
+
 <head>
   <title>Bálint Zsákai portfolio</title>
   <meta charset="utf-8">
@@ -24,11 +32,6 @@
   <link rel="stylesheet" href="styles/navbar.css">
   <link rel="stylesheet" href="styles/footer.css">
   <link rel="stylesheet" href="styles/project.css">
-
-  <!-- Custom JS -->
-  <script src="./script.js" async defer></script>
-
-  <!-- Google reCAPTCHA -->
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-
+  
+  
 </head>
