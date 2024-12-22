@@ -3,7 +3,6 @@ require "partials/head.php";
 ?>
 
 <div class="container mt-5">
-
     <!-- Logo at the top -->
     <div class="text-center mb-5">
         <a href="/">
@@ -11,16 +10,9 @@ require "partials/head.php";
         </a>
     </div>
 
-    <h2 class="text-center mb-5">Bejelentkezés</h2>
-
-    <!-- Error Message -->
-    <?php if (isset($_GET['status']) && $_GET['status'] === 'failure'): ?>
-        <div class="alert alert-danger text-center">
-            Helytelen felhasználónév vagy jelszó. Próbáld újra!
-        </div>
-    <?php endif; ?>
+    <h2 class="text-center mb-5">Regisztráció</h2>
     
-    <form action="/includes/database-handling/login.php" method="POST" class="form-login">
+    <form action="includes/database-handling/register.php" method="POST" class="form-login">
         <div class="row justify-content-center">
             <div class="col-12 col-md-6 col-lg-4">
                 <div class="form-group mt-3">
@@ -33,13 +25,18 @@ require "partials/head.php";
                     <input type="password" id="password" name="password" class="form-control" required>
                 </div>
 
-                <div class="form-group text-center mt-3">
-                    <button type="submit" class="btn btn-primary btn-md">Bejelentkezés</button>
+                <!-- Terms and Conditions Checkbox with Link -->
+                <div class="form-group mt-3">
+                    <label class="form-check-label" for="terms">
+                        <input type="checkbox" id="terms" name="terms" class="form-check-input" required>
+                        Elfogadom a <a href="/documents/Felhasználói_feltételek.pdf" target="_blank">felhasználási feltételeket</a> 
+                        és az <a href="/documents/Adatvédelmi_irányelvek.pdf" target="_blank">adatvédelmi irányelveket</a>.
+                    </label>
                 </div>
-                
-                <!-- Forgot password link -->
+
+                <!-- Submit Button -->
                 <div class="form-group text-center mt-5">
-                    <a href="forgot-password.php" class="text-muted">Elfelejtetted a jelszavad?</a>
+                    <button type="submit" class="btn btn-primary btn-md">Regisztráció</button>
                 </div>
             </div>
         </div>

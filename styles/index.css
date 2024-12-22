@@ -21,7 +21,7 @@
   }
   
   .jumbotron button {
-    width: 40%;
+
     color: black;
     white-space: normal;
   }
@@ -142,6 +142,10 @@
   
   #projects-section {
     padding-top: 60px;
+  }
+  
+  #form {
+    scroll-margin-top: 55px;
   }
 
   #form-section {
@@ -307,24 +311,23 @@
       display: flex;
       align-items: center;
     }
-  }
 
-
-  /*adjustments for medium+ viewport*/
-@media (min-width: 992px) {
     .jumbotron-image {
       width: 75%;
       height: auto;
     }
-  
-    .flexcontainer {
-      display: flex;
-      justify-content: center;
-    }
   }
 
 
+/*adjustments for medium+ viewport*/
+@media (min-width: 992px) {
   
+  .flexcontainer {
+    display: flex;
+    justify-content: center;
+  }
+}
+
 /*form*/
 .g-recaptcha {
     display: inline-block;
@@ -432,3 +435,4 @@ button::after {
 .project-name {
   padding: 5px;
 }
+

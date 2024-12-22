@@ -1,5 +1,7 @@
-.emoji {
-    font-size: 50px;
-    position: relative; 
-    top: 20px;
+@media (min-width: 992px) {
+  
+    .aligned {
+      display: flex;
+      align-items: center;
+    }
 }

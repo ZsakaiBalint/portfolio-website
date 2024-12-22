@@ -1,11 +1,5 @@
 <?php
 session_start();
-
-if(!defined('APP_ACCESS')) { 
-    http_response_code(404);
-    header("Location: /error");
-    die();
-}
 ?>
 
 <?php 
@@ -16,22 +10,23 @@ require "partials/head.php";
 require "partials/nav.php";
 ?>
 
+<script src="scripts/popup.js" defer></script>
+
 <body>
 
-<div class="jumbotron roboto-mono-custom">
+<div class="jumbotron roboto-mono-custom mt-5">
     <div class="container">
       <div class="jumbotron-row row">
         <div class="jumbotron-image-div col-12 col-lg-6">
-          <img src="images/profile_image.webp" class="jumbotron-image img-fluid img-circle" alt="profile image">
+          <img src="images/profile_image.webp" class="jumbotron-image img-fluid rounded-circle" alt="profile image">
         </div>
-        <div class="jumbotron-text col-12 col-lg-6 ">
+        <div class="col-12 col-lg-6 ">
           <h1>Zsákai Bálint</h1>
           <h3>szoftverfejlesztő informatikus</h3>
           <p>Ezt az oldal arra szolgál, hogy bemutassam a portfolio munkáimat</p>
 
             <button onclick="window.location.href='#projects-section';" id="projectsButton" type="button" class="btn btn-secondary btn-lg">
-              <i class="fa-solid fa-rocket"></i> 
-              <b>Tekintsd meg <br> a munkáimat</b>
+              <b>Nézd meg a munkáimat</b>
             </button>
 
           </div>
@@ -49,53 +44,72 @@ require "partials/nav.php";
       <h2> <kbd>Üdvözöllek a portfolio oldalamon!</kbd> </h2>
       <h3 class="roboto-mono-custom">
         Több, mint 3 éves tapasztalattal rendelkezek backend fejlesztésben (szerveroldali webfejlesztésben).
-        Olyan technológiákat használok a munkám során mint PHP, JavaScript és MySQL. 
+        A mindennapi munkám során a PHP, JavaScript és SQL nyelveket használom a leggyakrabban weboldalkészítés céljából.
+        Az általános célú programozási nyelvek közül a C++ nyelvet szeretem a legjobban.
+
       </h3>
     </div>
   </div>
 </div>
 
 <!-- Projects section -->
-<div id="projects-section" class="container margin-top">
-  <div class="flexcontainer row text-center">
-
+<!-- Projects Section -->
+<div id="projects-section" class="container my-5">
+  <div class="row text-center">
     <div class="col-12">
       <h1><i class="fa-solid fa-lightbulb"></i></h1>
-      <h2 class="margin-bottom"> <kbd>A munkáim</kbd></h2>
+      <h2 class="mb-4"><kbd>A munkáim</kbd></h2>
     </div>
   </div>
-</div>
 
-<div class="container">
-
-  <div id="projects" class="flexcontainer row text-center">
-
-  
-
-  <div class="container-fluid project">
-    <a href="/tic_tac_toe">
-        <div class="row project-inner">
-            <div class="col-12 col-md-6 image-column"> <!-- Use col-12 for small screens -->
-                <img src="../images/tic_tac_toe.webp" class="img-fluid img-rounded" alt="profile image">
+  <!-- Project 1 -->
+  <div class="row mb-4">
+    <div class="col-12">
+      <div class="card">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="/images/tic_tac_toe.webp" class="img-fluid " alt="Project 1">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Többrésztvevős amőba</h5>
+              <p class="card-text">
+                Hívd ki a barátaidat, vagy játssz a gép ellen egy izgalmas amőba játékban!
+              </p>
+              <a href="/tic_tac_toe" class="btn btn-primary">További információ</a>
             </div>
-            <div class="col-12 col-md-6 text-column"> <!-- Use col-12 for small screens -->
-
-                <div>
-                  <h2 class="bebas-neue-regular project-name"><i class="fa-solid fa-terminal"></i> Többrésztvevős amőba</h2>
-                  <div class="project-description">
-                      <h4 class="roboto-mono-custom">
-                          Hívd ki a barátaidat, vagy játssz a gép ellen egy izgalmas amőba játékban!
-                      </h4>
-                  </div>
-                </div>
-                
-            </div>
+          </div>
         </div>
-      </a>
+      </div>
+    </div>
   </div>
 
+  <!-- Project 2 -->
+  <div class="row mb-4">
+    <div class="col-12">
+      <div class="card">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="/images/tic_tac_toe.webp" class="img-fluid rounded-start" alt="Project 2">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Webes alkalmazás</h5>
+              <p class="card-text">
+                Fejlesztettem egy webes alkalmazást a felhasználók számára, hogy egyszerűen kezelhessék adataikat.
+              </p>
+              <a href="/web_app" class="btn btn-primary">További információ</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
+
+  <!-- Add more projects as needed -->
+
 </div>
+
 
 
 
@@ -116,8 +130,8 @@ $errors = $_SESSION['errors'] ?? [];
 $old = $_SESSION['old'] ?? [];
 ?>
 
-<div class="form container text-center roboto-mono-custom">
-<form method="post" action="includes/form-handling/formhandler.php">
+<div id="form" class="form container text-center roboto-mono-custom">
+<form method="post" action="/includes/form-handling/formhandler.php">
     <div class="form-group row">
         <label for="inputName" class="col-sm-2 col-form-label">Név</label>
         <input type="text" name="name" class="form-control" placeholder="Gipsz Jakab" id="inputName"
@@ -167,6 +181,5 @@ unset($_SESSION['old'], $_SESSION['errors']);
 <?php 
 require "partials/footer.php";
 ?>
-
 
 </body>

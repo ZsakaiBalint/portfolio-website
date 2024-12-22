@@ -7,16 +7,23 @@ return [
     "/login" => function ($params) {
         include_once "views/login.php";
     },
+    "/registration" => function ($params) {
+        include_once "views/registration.php";
+    },
     "/about" => function () {
-        $name = 'Guest';
         include_once "views/about.php";
     },
-    "/about/{name}" => function ($params) {
-        $name = htmlspecialchars($params['name']);
-        include_once "views/about.php";
+    "/blog" => function () {
+        include_once "views/blog.php";
     },
-    "error"=> function () {
+    "/error"=> function () {
         include_once "views/404.php";
+    },
+    "/maintenance" => function () {
+        include_once "views/maintenance.php";
+    },
+    "/admin-dashboard" => function () {
+        include_once "views/admin-dashboard.php";
     }
 ];
 

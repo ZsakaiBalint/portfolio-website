@@ -2,10 +2,24 @@
 
 function run(string $url, array $routes): void
 {
-    //allow '/' at the end of the uri 
+    //allow trailing slash at the end of the uri 
     $uri = parse_url($url);
     $path = rtrim($uri['path'], '/');
     $path = $path === '' ? '/' : $path;
+
+    // Handle maintenance mode (exclude the /maintenance route itself)
+    if (defined('APP_MAINTENANCE') && APP_MAINTENANCE === true && $path !== '/maintenance') {
+        http_response_code(503); // 503 Service Unavailable
+        header("Location: /maintenance");
+        die();
+    }
+
+    // Handle unauthorized access
+    if (!defined('APP_ACCESS')) {
+        http_response_code(403); // 403 Forbidden
+        header("Location: /error");
+        die();
+    }
 
     $params = [];
     foreach ($routes as $route => $callback) {
