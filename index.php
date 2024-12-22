@@ -2,7 +2,7 @@
 
 define("APP_ACCESS", true);
 
-define("APP_MAINTENANCE", false);
+define("APP_MAINTENANCE", true);
 
 include_once "includes/routing/routing.php";
 
