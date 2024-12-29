@@ -39,17 +39,17 @@ Push your changes to the main branch and deployment will be handled automaticall
 ## Explaining the structure of the project
 The project's file structure is as follows:
 
-/github/workflows:      Contains the GitHub workflows.
-/docker:                Contains configuration files necessary to run Docker images.
-/documentation:         Contains the documentation files related to this project.
-/documents:             Contains .pdf files.
-/images:                Contains image files.
-/includes:              Contains PHP files (backend-related logic).
-/migrations:            Contains .sql files (database migration files).
-/scripts:               Contains .js files (frontend-related logic).
-/styles:                Contains .css files (stylesheets defining the look and feel of the website).
-/vendor:                Contains PHP packages installed by Composer.
-/views:                 Contains PHP view files (the frontend of the application).
+- **/github/workflows**: Contains the GitHub workflows.
+- **/docker**: Contains configuration files necessary to run Docker images.
+- **/documentation**: Contains the documentation files related to this project.
+- **/documents**: Contains .pdf files.
+- **/images**: Contains image files.
+- **/includes**: Contains PHP files (backend-related logic).
+- **/migrations**: Contains .sql files (database migration files).
+- **/scripts**: Contains .js files (frontend-related logic).
+- **/styles**: Contains .css files (stylesheets defining the look and feel of the website).
+- **/vendor**: Contains PHP packages installed by Composer.
+- **/views**: Contains PHP view files (the frontend of the application).
 
 ## How to test the application
 Testing is not yet implemented. Future plans include:
