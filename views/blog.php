@@ -10,6 +10,17 @@ require "partials/head.php";
 require "partials/nav.php";
 ?>
 
+<?php
+
+require_once 'vendor/autoload.php';
+
+$faker = Faker\Factory::create();
+
+echo "Name: " . $faker->name() . PHP_EOL;
+echo "Email: " . $faker->email() . PHP_EOL;
+echo "Address: " . $faker->address() . PHP_EOL;
+?>
+
 
 <body>
 

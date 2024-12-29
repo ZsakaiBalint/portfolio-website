@@ -1,4 +1,4 @@
-CREATE TABLE project_gallery (
+CREATE TABLE IF NOT EXISTS project_gallery (
     id INT AUTO_INCREMENT PRIMARY KEY,
     project_id INT NOT NULL,
     image_path VARCHAR(255) NOT NULL,
