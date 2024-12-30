@@ -1,0 +1,253 @@
+\documentclass[12pt,a4paper]{report}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\usepackage{geometry}
+\geometry{a4paper, margin=1in}
+
+\title{Portfolio Website Documentation}
+\author{Bálint Zsákai}
+\date{2024}
+
+\begin{document}
+
+% Title Page
+\maketitle
+\pagenumbering{gobble}
+
+% Abstract
+\chapter*{Abstract}
+This document serves as a detailed guide for my portfolio website project. It encompasses an overview, user instructions, and developer documentation to ensure ease of understanding and maintenance. Designed to showcase my work, the website aims to attract potential clients interested in hiring me for web development services. Built using PHP (v. 8+), the website is currently under development.
+
+\newpage
+% Table of Contents
+\pagenumbering{roman}
+\tableofcontents
+\newpage
+
+% Main Content
+\pagenumbering{arabic}
+
+\chapter{Introduction}
+This document provides a detailed overview of the design, implementation, and usage of the portfolio website. The project aims to highlight professional achievements and technical skills through practical and industry-specific templates.
+
+The portfolio showcases various types of websites, each tailored to specific industries and use cases. These include:
+
+\begin{itemize}
+    \item Reservation systems, such as websites for hairdressers or cleaning services.
+    \item E-commerce platforms for online stores.
+    \item Interactive applications, such as real time chat.
+    \item Business solutions, including inventory management systems.
+\end{itemize}
+
+Each template is developed individually, demonstrating the adaptability and versatility of the underlying web development expertise. This document serves as a comprehensive guide for understanding and navigating the portfolio website, catering to both users and developers.
+
+\section{Project Overview}
+The portfolio website project is designed to showcase professional web development skills and demonstrate practical, industry-specific templates. It serves as a resource for potential clients seeking tailored web solutions and highlights expertise in creating diverse and functional websites.
+
+Key features of the portfolio include:
+
+\begin{itemize}
+    \item Dynamic templates tailored to various industries, such as reservation systems, e-Commerce platforms, and interactive applications.
+    \item A user-friendly interface designed to ensure accessibility and intuitive navigation.
+    \item Comprehensive documentation to assist both users and developers.
+\end{itemize}
+
+The website is built using PHP (v. 8+), with modern web design principles to ensure performance, responsiveness, and scalability. Currently, the project is in active development, with continuous updates planned to enhance its functionality and design.
+
+\section{Objective}
+The primary objective of this document is to demonstrate my ability to think systematically and translate ideas into actionable implementations. In addition, it serves as a guide throughout the planning and development process, ensuring structured progress before, during, and after the project's completion.
+
+\chapter{User Documentation}
+This section outlines how end users can interact with the portfolio website.
+
+\section{Getting Started}
+This section provides an overview of how end-users can navigate and interact with the portfolio website.
+
+The website is accessible at \url{www.balintfejleszto.hu} and is structured into three main sections:
+
+\begin{enumerate}
+    \item Homepage: Offers a brief introduction and showcases my projects.
+    \item About Page: Provides a detailed account of my journey as a software developer.
+    \item Blog Page: Features articles authored by me, focusing on topics related to software development, particularly web development. These posts reflect and deepen my understanding of the field.
+\end{enumerate}
+
+\section{Features}
+The website includes the following features:
+
+\begin{itemize}
+    \item Contact Form: Located at the bottom of the homepage, this form allows visitors to reach out to me if they are interested in collaborating on a website project.
+
+    \item Language Support: A built-in language switcher for English and Hungarian is planned, although it is currently under development.
+
+    \item User accounts: Visitors can register and log in to access additional functionalities.
+
+    \item Order Overview: Registered users have access to detailed information on their website orders. This includes billing information, legal documents, and milestones outlining the progress of their website's development.
+
+    \item Blog Comments: Registered users can leave comments on blog posts. Comments are subject to moderation and will only be displayed after approval by the website owner to maintain content quality and prevent misuse.
+
+\end{itemize}
+
+
+\section{Troubleshooting}
+Frequently Asked Questions (FAQ)
+
+\begin{enumerate}
+
+    \item \textbf{How do I get started with the application?} \\
+To get started with the application, follow these simple steps:
+Install the application following the installation guide.
+Open the application and log into your credentials.
+Navigate to the main dashboard to begin using the features.
+
+    \item \textbf{How do I create a new account?} \\
+To create a new account, click on the 'Sign Up' button on the login page. You will need to provide:
+
+A valid email address
+A secure password
+Any additional details (if required)
+Once you’ve submitted the form, check your email for a verification link to activate your account.
+
+    \item \textbf{What should I do if I forget my password?} \\
+If you’ve forgotten your password, click on the “Forgot Password?” link on the login page. Enter your registered email address, and we’ll send you a link to reset your password.
+
+    \item \textbf{How can I update my profile information?} \\
+To update your profile:
+
+Navigate to the “Profile” section from the main menu.
+Edit the fields you wish to update, such as name, email, or password.
+Save your changes by clicking on the "Update" button.
+
+    \item \textbf{Can I use the application on mobile devices?} \\
+Yes, our application is fully responsive and works seamlessly on both mobile and tablet devices. You can access the same features from your mobile browser as you would on a desktop.
+
+    \item \textbf{How do I troubleshoot errors or technical issues?} \\
+If you encounter any technical issues, follow these steps:
+
+Check our [Troubleshooting Guide] for solutions to common problems.
+If the issue persists, try restarting the application or clearing your browser cache.
+Contact our support team if you are still experiencing issues. Provide as much detail as possible for quicker resolution.
+
+    \item \textbf{How do I contact customer support?} \\
+For customer support, you can:
+
+Visit the [Help Center] for self-service support articles.
+Reach out to our support team by emailing support@[yourcompany].com.
+Use the live chat feature available on our website for immediate assistance.
+
+    \item \textbf{Are there any known issues with the application?} \\
+We maintain a list of known issues on our [Status Page]. Please check here if you are experiencing any disruptions. If the issue you’re facing isn’t listed, feel free to contact support.
+
+    \item \textbf{How do I cancel my subscription?} \\
+To cancel your subscription:
+
+Go to the “Billing” section under your account settings.
+Select the “Cancel Subscription” option.
+Follow the prompts to confirm your cancellation.
+
+    \item \textbf{Can I change my subscription plan?} \\
+Yes, you can upgrade or downgrade your plan at any time:
+
+Visit the "Billing" section of your account settings.
+Choose the “Change Plan” option and select your desired plan.
+Confirm the changes to update your plan.
+
+\end{enumerate}
+
+
+
+
+\chapter{Developer Documentation}
+This section is intended for developers who wish to contribute to or maintain the project. The development environment was built with Docker, featuring an Nginx server, PHP backend, and MySQL database. This project uses GitHub Actions for automated testing and deployment.
+
+\section{Prerequisites}
+To work with the project, you’ll need the following tools:
+\begin{itemize}
+    \item Docker (v20.10 or higher)
+    \item Docker Compose (v1.29 or higher)
+    \item Browser supporting modern web standards
+\end{itemize}
+
+\section{Project Structure}
+
+\begin{itemize}
+    \item \textbf{/github/workflows}: Contains the GitHub workflows.
+    \item \textbf{/docker}: Contains configuration files necessary to run Docker images.
+    \item \textbf{/documentation}: Contains the documentation files related to this project.
+    \item \textbf{/documents}: Contains .pdf files.
+    \item \textbf{/images}: Contains image files.
+    \item \textbf{/includes}: Contains PHP files (backend-related logic).
+    \item \textbf{/migrations}: Contains .sql files (database migration files).
+    \item \textbf{/scripts}: Contains .js files (frontend-related logic).
+    \item \textbf{/styles}: Contains .css files (stylesheets defining the look and feel of the website).
+    \item \textbf{/vendor}: Contains PHP packages installed by Composer.
+    \item \textbf{/views}: Contains PHP view files (the frontend of the application).
+\end{itemize}
+
+\section{How to Test the Application}
+Testing is not yet implemented. Future plans include:
+\begin{itemize}
+    \item Unit tests for backend logic using PHPUnit.
+    \item End-to-end tests for frontend interactions.
+\end{itemize}
+
+TODO: test cases
+
+
+
+\section{How to Run the Development Environment}
+To get the development environment running, follow these steps:
+\begin{enumerate}
+    \item Install \href{https://www.docker.com/}{Docker}
+    \item Start Docker, then call the following command in your terminal:
+    \begin{verbatim}
+    docker compose up
+    \end{verbatim}
+    This command will start the following services:
+    \begin{itemize}
+        \item Nginx server
+        \item PHP with extensions
+        \item MySQL database
+    \end{itemize}
+    \item Open your favourite browser and navigate to \texttt{localhost} to access the website.
+\end{enumerate}
+
+\section{Database Connection Details}
+You can access the test database by creating a database connection with these credentials:
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+\textbf{Key} & \textbf{Value} \\
+\hline
+Host & 127.0.0.1 \\
+Port & 4306 \\
+Root Password & secret \\
+MySQL User & user \\
+MySQL Password & secret \\
+Database Name & docker-php \\
+\hline
+\end{tabular}
+\end{center}
+
+\section{How to Deploy the Application}
+Push your changes to the main branch, and deployment will be handled automatically by the GitHub Action \href{https://github.com/marketplace/actions/ftp-deploy}{SamKirkland/FTP-Deploy-Action}.
+
+
+
+\section{How to Document the Application}
+The documentation is written in LaTeX format, using \href{https://www.overleaf.com/project/677243f613cd740ebdf0d957}{Overleaf}. The source files for the documentation and the compiled version are included in the /documentation folder in the root of the project.
+
+Steps to update the documentation:
+\begin{enumerate}
+    \item Modify the LaTeX files.
+    \item Compile the updated documentation into a .pdf file.
+    \item Place the .pdf file in the \texttt{/documentation} folder with the format \texttt{documentation\_v<version>.pdf}.
+\end{enumerate}
+
+\section{Code Overview}
+TODO...
+
+\section{Future Enhancements}
+TODO...
+
+\end{document}
+
