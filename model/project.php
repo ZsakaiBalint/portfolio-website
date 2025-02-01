@@ -46,13 +46,13 @@ class Project extends DatabaseHandler {
         return $stmt->fetchAll();
     }
 
-    public function getProjectCardInfoPagination($offset) {
+    public static function getProjectCardInfoPagination($offset) {
 
         $sql = "SELECT title, short_desc, image_path 
-        FROM projects INNER JOIN projects_gallery ON projects.id = projects_gallery.project_id 
+        FROM projects INNER JOIN project_images ON projects.id = project_images.project_id 
         LIMIT 3 OFFSET :offset";
 
-        $stmt = $this->connect()->prepare($sql);
+        $stmt = self::connect()->prepare($sql);
         $stmt->bindParam(':offset',$offset, PDO::PARAM_INT);
         $stmt->execute();
         return $stmt->fetchAll();

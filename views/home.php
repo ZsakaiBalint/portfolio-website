@@ -62,10 +62,10 @@ require "partials/nav.php";
   </div>
 
   <?php 
+
     require 'model/project.php';
 
-    $testObj = new Project();
-    $projectCardInfo = $testObj->getProjectCardInfo(0);
+    $projectCardInfo = Project::getProjectCardInfoPagination(0);
     foreach ($projectCardInfo as $info) {
       echo '
       <div class="row mb-4">
