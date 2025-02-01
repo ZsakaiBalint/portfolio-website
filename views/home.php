@@ -14,6 +14,11 @@ require "partials/nav.php";
 
 <body>
 
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ND5QSB5K"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
 <div class="jumbotron roboto-mono-custom mt-5">
     <div class="container">
       <div class="jumbotron-row row">

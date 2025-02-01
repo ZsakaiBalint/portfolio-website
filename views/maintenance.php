@@ -10,9 +10,14 @@ if (!defined('APP_MAINTENANCE') || APP_MAINTENANCE !== true) {
 require "partials/head.php";
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-    <body>
+
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ND5QSB5K"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
         <div class="text-center">
             <h1>Az oldal karbantartás alatt áll</h1>
             <h2>A karbantartás időtartama: </h2>
