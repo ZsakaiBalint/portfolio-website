@@ -20,7 +20,7 @@ require "partials/nav.php";
     <div class="row align-items-center">
       <!-- Left Column: Image -->
       <div class="col-12 col-md-6 mb-4 mb-md-0">
-        <img src="../images/about_1.jpg" class="img-fluid" alt="graduation">
+        <img src="/resources/images/about_1.jpg" class="img-fluid" alt="graduation">
       </div>
 
       <!-- Right Column: Text -->
@@ -43,7 +43,7 @@ require "partials/nav.php";
 
       <!-- Right Column: Image -->
       <div class="col-12 col-md-6">
-        <img src="../images/about_2.jpg" class="img-fluid" alt="code and glasses">
+        <img src="/resources/images/about_2.jpg" class="img-fluid" alt="code and glasses">
       </div>
     </div>
   </div>

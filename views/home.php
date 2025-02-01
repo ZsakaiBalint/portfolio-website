@@ -18,7 +18,7 @@ require "partials/nav.php";
     <div class="container">
       <div class="jumbotron-row row">
         <div class="jumbotron-image-div col-12 col-lg-6">
-          <img src="images/profile_image.webp" class="jumbotron-image img-fluid rounded-circle" alt="profile image">
+          <img src="resources/images/profile_image.webp" class="jumbotron-image img-fluid rounded-circle" alt="profile image">
         </div>
         <div class="col-12 col-lg-6 ">
           <h1>Zsákai Bálint</h1>
@@ -36,7 +36,6 @@ require "partials/nav.php";
     </div>
 </div>
 
-
 <!-- Quick introduction -->
 <div class="container margin-top">
   <div class="flexcontainer row">
@@ -52,7 +51,7 @@ require "partials/nav.php";
   </div>
 </div>
 
-<!-- Projects section -->
+
 <!-- Projects Section -->
 <div id="projects-section" class="container my-5">
   <div class="row text-center">
@@ -62,13 +61,51 @@ require "partials/nav.php";
     </div>
   </div>
 
+  <?php 
+    require 'model/project.php';
+
+    $testObj = new Project();
+    $projectCardInfo = $testObj->getProjectCardInfo(0);
+    foreach ($projectCardInfo as $info) {
+      echo '
+      <div class="row mb-4">
+        <div class="col-12">
+          <div class="card">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="' . $info["image_path"] . '" class="img-fluid" alt="Project 1">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+
+                  <h5 class="card-title">
+                    ' .  $info["title"] . '
+                  </h5>
+
+                  <p class="card-text">
+                    ' . $info["short_desc"] . '
+                  </p>
+
+                  <a href="/tic_tac_toe" class="btn btn-primary">További információ</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    ';
+    }
+   
+   
+  ?>
+  
   <!-- Project 1 -->
   <div class="row mb-4">
     <div class="col-12">
       <div class="card">
         <div class="row g-0">
           <div class="col-md-4">
-            <img src="/images/tic_tac_toe.webp" class="img-fluid " alt="Project 1">
+            <img src="resources/images/tic_tac_toe.webp" class="img-fluid " alt="Project 1">
           </div>
           <div class="col-md-8">
             <div class="card-body">
@@ -90,7 +127,7 @@ require "partials/nav.php";
       <div class="card">
         <div class="row g-0">
           <div class="col-md-4">
-            <img src="/images/tic_tac_toe.webp" class="img-fluid rounded-start" alt="Project 2">
+            <img src="resources/images/tic_tac_toe.webp" class="img-fluid rounded-start" alt="Project 2">
           </div>
           <div class="col-md-8">
             <div class="card-body">

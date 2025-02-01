@@ -9,7 +9,7 @@ require "partials/head.php";
     <body>
         <div class="text-center">
             <h2>Ez az oldal nem található...</h2>
-            <img src="/images/construction.gif" alt="under maintenance gif with a penguin">
+            <img src="/resources/images/construction.gif" alt="under maintenance gif with a penguin">
             <br>
             <button onclick="window.location.href='/';" type="button" class="btn btn-secondary btn-lg margin-top">
               <b>Ugrás a főoldalra</b>

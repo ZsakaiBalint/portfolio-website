@@ -1,8 +1,10 @@
-<?php 
+<?php
+
+require 'home_controller.php';
 
 function run(string $url, array $routes): void
 {
-    //allow trailing slash at the end of the uri 
+    // Allow trailing slash at the end of the URI
     $uri = parse_url($url);
     $path = rtrim($uri['path'], '/');
     $path = $path === '' ? '/' : $path;
@@ -34,13 +36,17 @@ function run(string $url, array $routes): void
                 $params = array_merge($params, $queryParams);
             }
 
-            $callback($params);
+            // Call the controller method with parameters
+            $controller = new $callback[0]();
+            $method = $callback[1];
+            $controller->$method($params);  // Call the method in the controller
+
             return;
         }
     }
 
     // If no route matched, include the 404 page
-    include_once "views/404.php";
+    $controller = new HomeController();
+    $controller->view('404');
 }
-
 ?>

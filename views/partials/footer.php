@@ -1,3 +1,8 @@
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ND5QSB5K"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
 <!-- Footer -->
 <footer class="footer text-center margin-top roboto-mono-custom">
     <div class="container">
@@ -7,7 +12,7 @@
             <p>email: balintzsakai@gmail.com</p>
             <p>telefon: +36 30 24 55 655</p>
             <p>LinkedIn: <a href="https://www.linkedin.com/in/bálint-zsákai" target="_blank">https://www.linkedin.com/in/bálint-zsákai</a></p>
-            <p>Töltsd le az önéletrajzom itt: <a href="/documents/Zsákai_Bálint_önéletrajz.pdf" target="_blank">Zsákai_Bálint_önéletrajz.pdf</a></p>
+            <p>Töltsd le az önéletrajzom itt: <a href="/resources/documents/Zsákai_Bálint_önéletrajz.pdf" target="_blank">Zsákai_Bálint_önéletrajz.pdf</a></p>
           </div>
         </div>
       </div>

@@ -4,7 +4,7 @@
     <div class="container-fluid">
         
         <a class="navbar-brand abs" href="/">
-            <img src="images/logo.png" alt="Your Logo" class="img-fluid" style="max-width: 150px; max-height: 40px;">
+            <img src="/resources/images/logo.png" alt="Your Logo" class="img-fluid" style="max-width: 150px; max-height: 40px;">
         </a>
         
         <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNavbar">

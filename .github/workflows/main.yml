@@ -3,7 +3,7 @@ name: 🚀 Deploy website on push
 on:
   push:
     branches:
-      - main
+      - iss-20
 
 jobs:
   web-deploy:
@@ -19,3 +19,14 @@ jobs:
           server: ${{ secrets.FTP_SERVER_ADDRESS }}
           username: ${{ secrets.FTP_SERVER_USER }}
           password: ${{ secrets.FTP_SERVER_PASS }}
+          exclude: |
+              **/.git*
+              **/.github*
+              **/docker/*
+              **/documentation*
+              **/migrations*
+              **/.gitignore
+              **/cli.php
+              **/docker-compose.yaml
+              **/database_credentials.php
+              **/README.MD
