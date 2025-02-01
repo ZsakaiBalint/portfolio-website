@@ -30,6 +30,9 @@ jobs:
       - name: 🧑‍💻 Install dependencies
         run: composer install --no-dev --prefer-dist --optimize-autoloader
 
+      - name: 🕵️ Verify installed dependencies
+        run: composer show --direct
+
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
