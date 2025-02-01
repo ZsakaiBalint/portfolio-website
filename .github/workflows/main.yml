@@ -12,7 +12,24 @@ jobs:
     steps:
       - name: 🚚 Get latest code
         uses: actions/checkout@v4
-    
+
+      - name: 📦 Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+          tools: composer:v2
+          coverage: none
+
+      - name: 🔑 Cache Composer dependencies
+        uses: actions/cache@v4
+        with:
+          path: vendor
+          key: composer-${{ runner.os }}-${{ hashFiles('**/composer.lock') }}
+          restore-keys: composer-${{ runner.os }}-
+
+      - name: 🧑‍💻 Install dependencies
+        run: composer install --no-dev --prefer-dist --optimize-autoloader
+
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
@@ -20,13 +37,18 @@ jobs:
           username: ${{ secrets.FTP_SERVER_USER }}
           password: ${{ secrets.FTP_SERVER_PASS }}
           exclude: |
-              **/.git*
-              **/.github*
-              **/docker/*
-              **/documentation*
-              **/migrations*
-              **/.gitignore
-              **/cli.php
-              **/docker-compose.yaml
-              **/database_credentials.php
-              **/README.MD
+            **/.git*
+            **/.git*/**
+            **/.github*
+            **/.github*/**
+            **/docker*
+            **/docker*/**
+            **/documentation*
+            **/documentation*/**
+            **/migrations*
+            **/migrations*/**
+            **/.gitignore
+            **/cli.php
+            **/docker-compose.yaml
+            **/database_credentials.php
+            **/README.MD
