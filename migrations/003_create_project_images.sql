@@ -7,6 +7,8 @@ CREATE TABLE IF NOT EXISTS project_images (
     FOREIGN KEY (project_id) REFERENCES projects(id) ON DELETE CASCADE
 );
 
+DROP TRIGGER IF EXISTS ensure_single_thumbnail;
+
 CREATE TRIGGER ensure_single_thumbnail
 BEFORE INSERT ON project_images
 FOR EACH ROW

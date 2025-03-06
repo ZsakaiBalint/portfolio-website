@@ -48,8 +48,6 @@ jobs:
             **/docker*/**
             **/documentation*
             **/documentation*/**
-            **/migrations*
-            **/migrations*/**
             **/.gitignore
             **/cli.php
             **/docker-compose.yaml

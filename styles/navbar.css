@@ -1,88 +1,69 @@
 /* NAVBAR */
+
+/* General */
 .navbar {
-    background-color: rgb(103,120,88);
-    font-weight: bold;
-    margin: 0px;
-    border: 0px;
-    border-radius: 15px;
+  background-color: rgb(103,120,88);
+  font-weight: bold;
+  margin: 0px;
+  border: 0px;
+  border-radius: 15px;
+  padding: 4px;
 }
   
+/* Center nav items */
 .navbar-collapse {
-    border-top: 0px;
-}
-  
-  .navbar-container {
-    position: sticky;
-    top: 0; 
-    z-index: 1000;
-    position: sticky;
-    padding: 0px;
-    border-radius: 25px;
-  }
-  
-  .nav a {
-    color: white !important;
-    transition: background-color 1s ease;
-  }
-  
-  .nav a:hover {
-    background-color: #2c4729 !important;
-  }
-  
-  .dropdown-button {
-    padding: 15px !important;
-  }
-  
-  .dropdown-fst {
-    background-color: rgb(123,140,108);
-  }
-  
-  .dropdown-snd {
-    background-color: rgb(163,180,148);
-  }
-  
-  .active a {
-    background-color: black !important;
-  }
-  
-  .dropdown-toggle[aria-expanded="true"] {
-    background-color: black !important;
-  }
-  
-  .dropdown-menu {
-    padding: 0px;
-  }
-  
-  .dropdown-menu a {
-    font-weight: bold !important;
-  }
-  
-  .navbar-toggle {
-    background-color: #888 !important;
-    border: 0px;
-  }
-  
-  .navbar .icon-bar {
-    background-color: white !important;
-  }
-  
-  .navbar-toggle:hover {
-    background-color: white !important;
-  }
-  
-  .navbar-toggle:hover .icon-bar {
-    background-color: #888 !important;
-  }
-
-
-@media (min-width: 768px) {
-  .container-fluid {
-    display: flex;
-    justify-content: center;
-  }
+  justify-content: center;
 }
 
+/* Stick to the top of the screen */
+.navbar-container {
+  position: sticky;
+  top: 0; 
+  z-index: 1000;
+  position: sticky;
+  padding: 0px;
+  border-radius: 25px;
+}
+
+/* White background on active nav item */
+.active a {
+  background-color: white;
+}
+
+/* Not active nav items text color */
+.nav-item:not(.active) a {
+  color: white;
+}
+
+/* Color of the hamburger icon's outline */
+.navbar-toggler {
+  border: 3px solid rgb(163,180,148);
+}
+
+/* Color of the hamburger icon's outline on hover */
+.navbar-toggler:hover {
+  border: 3px solid white;
+}
+
+/* Color of the hamburger icon's lines on hover */
+.navbar-toggler:hover .navbar-toggler-icon {
+  filter: invert(1);
+}
+
+/* Remove outline on hamburger icon when clicked */
+.navbar-toggler:focus,
+.navbar-toggler:active {
+  box-shadow: none;
+}
+
+/* Margin for navbar items */
 .navbar-nav > li {
-  position: relative; 
-  padding: 0 15px;
+  margin: 10px 15px;
+}
+
+/* Underline navbar items on hover */
+.nav-item a:hover {
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  text-decoration-thickness: 3px;
 }
